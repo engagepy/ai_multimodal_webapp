@@ -21,7 +21,7 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
   if (!isOpen) return null;
 
   const llmOptions = [
-    { label: 'Angry', value: 'gpt-3.5-turbo' },
+    { label: 'Angry', value: 'gpt-4' },
     { label: 'Depressed', value: 'gpt-4' },
     { label: 'Sad', value: 'gpt-4' },
     { label: 'Happy', value: 'gpt-4' },
