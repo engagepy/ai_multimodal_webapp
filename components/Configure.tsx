@@ -21,14 +21,19 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
   if (!isOpen) return null;
 
   const llmOptions = [
-    { label: 'GPT 3.5 Turbo', value: 'gpt-3.5-turbo' },
-    { label: 'GPT 4', value: 'gpt-4' }
+    { label: 'Angry', value: 'gpt-3.5-turbo' },
+    { label: 'Depressed', value: 'gpt-4' },
+    { label: 'Sad', value: 'gpt-4' },
+    { label: 'Happy', value: 'gpt-4' },
+    { label: 'Anxious', value: 'gpt-4' },
+    { label: 'Lonely', value: 'gpt-4' },
+
   ];
 
   const similarityMetricOptions = [
-    { label: 'Cosine Similarity', value: 'cosine' },
-    { label: 'Euclidean Distance', value: 'euclidean' },
-    { label: 'Dot Product', value: 'dot_product' }
+    { label: 'Community', value: 'cosine' },
+    { label: 'Councellor', value: 'euclidean' },
+    { label: 'Top Secret', value: 'dot_product' }
   ];
 
   const handleSave = () => {
@@ -56,16 +61,16 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
           <div className="flex mb-4">
             <Dropdown
               fieldId="llm"
-              label="LLM"
+              label="Feeling:"
               options={llmOptions}
               value={selectedLlm}
               onSelect={setSelectedLlm}
             />
-            <Toggle enabled={rag} label="Enable vector content (RAG)" onChange={() => setRag(!rag)} />
+            <Toggle enabled={rag} label="Enable Positivity Nudges" onChange={() => setRag(!rag)} />
           </div>
           <Dropdown
             fieldId="similarityMetric"
-            label="Similarity Metric"
+            label="Sharing with:"
             options={similarityMetricOptions}
             value={selectedSimilarityMetric}
             onSelect={setSelectedSimilarityMetric}

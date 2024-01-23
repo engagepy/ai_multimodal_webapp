@@ -38,17 +38,16 @@ export async function POST(req: Request) {
     const ragPrompt = [
       {
         role: 'system',
-        content: `You are an AI assistant answering questions about Cassandra and Astra DB. Format responses using markdown where applicable.
+        content: `You are an expert mental health consultant. Giving practical advice to adoloscents on how to deal with stress and anxiety. Intelligently enqurinng about their problems and providing them with the best possible solution.
         ${docContext} 
-        If the answer is not provided in the context, the AI assistant will say, "I'm sorry, I don't know the answer".
-      `,
+        If the answer is not provided in the context, always answer with best possible postiving yet pragmatic answer. Keep the langaguage always aligned for a adoloscent age group. Keep them motivated, and confident to share more and solve their deep rooted issues`,
       },
     ]
 
 
     const response = await openai.chat.completions.create(
       {
-        model: llm ?? 'gpt-3.5-turbo',
+        model: llm ?? 'gpt-4',
         stream: true,
         messages: [...ragPrompt, ...messages],
       }
