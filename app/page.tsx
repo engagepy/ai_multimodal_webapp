@@ -1,5 +1,5 @@
 "use client";
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';  
 import Bubble from '../components/Bubble'
 import { useChat, Message } from 'ai/react';
 import Footer from '../components/Footer';
@@ -33,8 +33,18 @@ export default function Home() {
     append(msg, { options: { body: { useRag, llm, similarityMetric}}});
   };
 
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleMicrophoneClick = () => {
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
+  };
   return (
     <>
+    {/* Notification */}
+    <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 ${showNotification ? 'translate-y-0' : '-translate-y-20'} z-50 transition-all bg-yellow-500 text-white py-2 px-4 rounded-md shadow-lg`}>
+        Coming soon, keep sharing!
+      </div>
     <main className="flex h-screen flex-col items-center justify-center">
       <section className='chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full rounded-md p-2 md:p-6'>
         <div className='chatbot-header pb-6'>
@@ -79,11 +89,11 @@ export default function Home() {
   
 
   {/* Send Button */}
-  {/* <button type="button" className='chatbot-record-button flex rounded-md items-center justify-center px-2.5'>
+  <button onClick={handleMicrophoneClick} className='chatbot-record-button flex rounded-md items-center justify-center px-2.5'>
     <svg width="20" height="20" viewBox="0 0 20 20">
       <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2" fill="red"/>
     </svg>
-  </button> */}
+  </button>
 </form>
 
 
