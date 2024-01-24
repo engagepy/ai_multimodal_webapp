@@ -2,8 +2,8 @@ import PromptSuggestionButton from "./PromptSuggestionButton";
 
 const PromptSuggestionRow = ({ onPromptClick }) => {
   const prompts = [
-    'What is the best way out of depression?',
-    'Why does everyone bully me?',
+    'What help can I expect for depression?',
+    'Why do I feel everyone bullys me?',
     'Cannot focus even when I try?',
     'How do I control my anger?',
   ];
