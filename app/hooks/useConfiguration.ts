@@ -17,7 +17,7 @@ const useConfiguration = () => {
   };
 
   const [useRag, setUseRag] = useState<boolean>(() => getLocalStorageValue('useRag', 'true') === 'true');
-  const [llm, setLlm] = useState<string>(() => getLocalStorageValue('llm', 'gpt-3.5-turbo'));
+  const [llm, setLlm] = useState<string>(() => getLocalStorageValue('llm', 'gpt-4'));
   const [similarityMetric, setSimilarityMetric] = useState<SimilarityMetric>(
     () => getLocalStorageValue('similarityMetric', 'cosine') as SimilarityMetric
   );
