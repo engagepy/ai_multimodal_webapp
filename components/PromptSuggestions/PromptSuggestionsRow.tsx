@@ -5,7 +5,7 @@ const PromptSuggestionRow = ({ onPromptClick }) => {
     'What help can I expect for depression?',
     'Why do I feel everyone bullys me?',
     'Cannot focus even when I try?',
-    'How do I control my anger?',
+    'My tests are coming up.',
   ];
 
   return (
