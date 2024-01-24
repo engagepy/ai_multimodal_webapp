@@ -7,7 +7,7 @@ const openai = new OpenAI({
 
 export async function POST(req: Request) {
   try {
-    const {messages, useRag, llm, similarityMetric} = await req.json();
+    const {messages, llm} = await req.json();
 
     const ragPrompt = [
       {
