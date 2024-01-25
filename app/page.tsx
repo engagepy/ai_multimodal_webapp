@@ -79,7 +79,7 @@ export default function Home() {
         <form className='flex h-[40px] gap-2' onSubmit={handleSend}>
   <input onChange={handleInputChange} value={input} className='chatbot-input flex-1 text-sm md:text-base outline-none bg-transparent rounded-md p-2' placeholder='Send a message...' />
 
-  {/* Record Button */}
+  {/* Send Button */}
   <button type="submit" className='chatbot-send-button flex rounded-md items-center justify-center px-2.5'>
     <svg width="20" height="20" viewBox="0 0 20 20">
       <path fill="yellow" stroke="black" strokeWidth="0.5" d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z" />
@@ -87,7 +87,7 @@ export default function Home() {
   </button>
   
 
-  {/* Send Button */}
+  {/* Record Button */}
   <button onClick={handleMicrophoneClick} className='chatbot-record-button flex rounded-md items-center justify-center px-2.5'>
     <svg width="20" height="20" viewBox="0 0 20 20">
       <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2" fill="red"/>
