@@ -120,6 +120,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.local
 .venv
 env/
 venv/
@@ -160,3 +161,4 @@ cython_debug/
 
 node_modules
 .next
+*.mp3
