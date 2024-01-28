@@ -66,9 +66,9 @@ export default function Home() {
             </div>
           </div>
           <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">
-            Chatting with the  <span className="text-yellow-500">Kavach mental health A.I</span> is a breeze! Simply type your questions, situation or dilemmas. This chat is <span className="text-yellow-500">100% anonymous.</span> 
-            
-          </p>
+   With <span className="text-[var(--text-primary-main)]">Kavach mental health</span> is a breeze! State your questions or dilemmas. Chat is <span className="text-[var(--text-primary-main)]">100% anonymous.</span>
+</p>
+
         </div>
         <div className='flex-1 relative overflow-y-auto my-4 md:my-6'>
           <div className='absolute w-full overflow-x-hidden'>

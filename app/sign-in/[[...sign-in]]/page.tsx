@@ -1,4 +1,5 @@
 import { SignIn } from "@clerk/nextjs";
+import { shadesOfPurple } from '@clerk/themes';
 import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 
