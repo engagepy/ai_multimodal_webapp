@@ -46,14 +46,14 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-50">
-      <div className="chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full p-6 rounded shadow-lg overflow-auto">
+    <div className={`configure-modal-bg fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-50`}>
+      <div className="chatbot-section configure-modal-bg flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full p-6 rounded shadow-lg overflow-auto">
         <div className="grow">
           <div className='pb-6 flex justify-between'>
-            <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>Configure</h1>
+            <h1 className='configure-header chatbot-text-primary text-xl md:text-2xl font-medium'>Configure</h1>
             <button
               onClick={onClose}
-              className="chatbot-text-primary text-4xl font-thin leading-8"
+              className="configure-close-btn chatbot-text-primary text-4xl font-thin leading-8"
             >
               <span aria-hidden>×</span>
             </button>
@@ -79,13 +79,13 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
         <div className="self-end w-full">
           <div className="flex justify-end gap-2">
             <button
-              className='chatbot-button-secondary flex rounded-md items-center justify-center px-2.5 py-3'
+              className='configure-button-secondary chatbot-button-secondary flex rounded-md items-center justify-center px-2.5 py-3'
               onClick={onClose}
             >
               Cancel
             </button>
             <button
-              className='chatbot-button-primary flex rounded-md items-center justify-center px-2.5 py-3'
+              className='configure-button-primary chatbot-button-primary flex rounded-md items-center justify-center px-2.5 py-3'
               onClick={handleSave}
             >
               Save Configuration

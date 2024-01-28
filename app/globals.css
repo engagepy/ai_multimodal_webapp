@@ -5,40 +5,37 @@
 :root {
   --text-primary: #FFFFFF;
   --text-primary-inverse: #090909;
-  --text-primary-main: #7724AA;
-  --text-secondary: #A6AAAE;
+  --text-primary-main: #2A8D5C; /* Updated to use the gradient start color for primary text in light mode */
+  --text-secondary: #DE4FF3; /* Updated to use the gradient middle color for secondary text */
   --text-secondary-inverse: #494A4D;
   --background-bubble-primary: #611C9B;
   --background-bubble-secondary: #F7F7F7;
   --border-primary: #CED0D2;
   --background-soft: #F3E5F5;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 163, 238, 152; /* Updated to login page gradient start */
+  --background-end-rgb: 233, 252, 136; /* Updated to login page gradient end */
   --text-tertiary: #6B6F73;
-  --shadow-primary: 0px 6px 16px 0px #0A0A0A1F, 0px 4px 14px 0px #0A0A0A14, 0px 8px 10px 0px #0A0A0A14;
+  --shadow-primary: 0px 6px 16px 0px rgba(10, 10, 10, 0.12), 0px 4px 14px 0px rgba(10, 10, 10, 0.08), 0px 8px 10px 0px rgba(10, 10, 10, 0.08);
   --processing-dot-size: 4px;
 }
-
 
 .dark {
   --text-primary: #090909;
   --text-primary-inverse: #FFFFFF;
-  --text-primary-main: #9946B9;
+  --text-primary-main: #9946B9; /* Preserved for dark mode primary text */
   --text-secondary: #494A4D;
   --text-secondary-inverse: #A6AAAE;
-  --background-bubble-primary: #BA68C8;
+  --background-bubble-primary: #BA68C8; /* Preserved for dark mode bubbles */
   --background-bubble-secondary: #232324;
   --background-soft: #200033;
   --border-primary: #262626;
-  --background-start-rgb: 23, 23, 23;
-  --background-end-rgb: 28, 28, 28;
+  --background-start-rgb: 23, 23, 23; /* Preserved for dark mode gradient start */
+  --background-end-rgb: 28, 28, 28; /* Preserved for dark mode gradient end */
 }
 
-
 body {
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  transition: background-color 0.3s ease; /* Smooth transition for mode switch */
 }
 
 .chatbot-section {
@@ -220,3 +217,78 @@ body {
 .vercel-link hr {
   border-color: var(--border-primary);
 }
+
+
+/* ... existing styles ... */
+
+/* Configure Modal Styles */
+.configure-modal-bg {
+  background-color: var(--background-bubble-secondary); /* Light theme background */
+}
+
+.dark .configure-modal-bg {
+  background-color: var(--background-bubble-primary); /* Dark theme background */
+}
+
+.configure-header {
+  color: var(--text-primary-main); /* Primary text color */
+}
+
+.configure-close-btn {
+  color: var(--text-secondary); /* Secondary text color */
+}
+
+.configure-dropdown-label {
+  color: var(--text-primary); /* Dropdown label color */
+}
+
+.configure-dropdown {
+  border-color: var(--border-primary); /* Dropdown border color */
+  background-color: var(--background-soft); /* Dropdown background color */
+}
+
+.configure-toggle-label {
+  color: var(--text-primary); /* Toggle label color */
+}
+
+.configure-toggle-bg {
+  background-color: var(--background-soft); /* Toggle background color */
+}
+
+.configure-button-secondary {
+  background-color: var(--background-bubble-secondary); /* Secondary button background color */
+  color: var(--text-primary-main); /* Secondary button text color */
+}
+
+.configure-button-primary {
+  background-color: var(--text-primary-main); /* Primary button background color */
+  color: var(--background-bubble-secondary); /* Primary button text color */
+}
+
+/* ... any other styles you may need to add or adjust ... */
+/* ... existing styles ... */
+
+/* Adjustments for dark mode */
+.dark .configure-modal-bg {
+  background-color: var(--background-bubble-primary); /* Dark theme background for modal */
+}
+
+.dark .configure-header {
+  color: var(--text-primary-inverse); /* Dark theme color for header text */
+}
+
+.dark .configure-close-btn {
+  color: var(--text-secondary-inverse); /* Dark theme color for close button */
+}
+
+.dark .configure-button-secondary {
+  background-color: var(--background-soft); /* Dark theme secondary button background */
+  color: var(--text-primary-inverse); /* Dark theme secondary button text color */
+}
+
+.dark .configure-button-primary {
+  background-color: var(--text-primary-main); /* Dark theme primary button background */
+  color: var(--text-primary-inverse); /* Dark theme primary button text color */
+}
+
+/* ... rest of the styles ... */
