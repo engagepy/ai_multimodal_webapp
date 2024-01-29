@@ -30,7 +30,7 @@ export default function LoginPage() {
       <div className="text-center mt-6 px-4">
         <p className="text-[#3C3B39]">
           - Anoushka Jollyy
-          <hr></hr>
+          <hr className="glowing-gradient-hr"></hr>
           <strong>Founder Kavach</strong>
         </p>
       </div>

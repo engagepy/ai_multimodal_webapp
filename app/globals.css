@@ -301,3 +301,18 @@ body {
   display: block;
   margin-right: auto;
 }
+
+@keyframes shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glowing-gradient-hr {
+  border: 0;
+  height: 2px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, #A3EE98 0%, #FFBBF4 50%, #E9FC88 100%);
+  animation: shift 8s ease infinite;
+  box-shadow: 0 0 8px #FFBBF4, 0 0 12px #E9FC88;
+}
