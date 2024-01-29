@@ -5,8 +5,8 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 export const metadata = {
-  title: "AI Kavach",
-  description: "Mental Health by Kavach AI",
+  title: "Kavach A.I.",
+  description: "Your Mental Health Safe Space",
 };
 
 
