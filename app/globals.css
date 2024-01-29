@@ -292,3 +292,12 @@ body {
 }
 
 /* ... rest of the styles ... */
+.cl-logoImage {
+  /* Set width and height to a larger size */
+  width: 50%; /* or a specific size in pixels, e.g., 200px */
+  height: auto; /* maintain aspect ratio */
+
+  /* Center the logo image */
+  display: block;
+  margin-right: auto;
+}

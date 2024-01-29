@@ -23,8 +23,15 @@ export default function LoginPage() {
       </div>
       <div className="text-center mt-6 px-4">
         <p className="text-[#3C3B39]">
-          Share your thoughts, and let&apos;s tackle school, home, or any challenges together. 
-          Your privacy is our priority. Start your journey with Kavach A.I. today.
+        &quot;Share your thoughts, and let&apos;s tackle school, home, or any challenges together. 
+            Your privacy is our priority. Start your journey with Kavach A.I. today.&quot;
+        </p>
+      </div>
+      <div className="text-center mt-6 px-4">
+        <p className="text-[#3C3B39]">
+          - Anoushka Jollyy
+          <hr></hr>
+          <strong>Founder KAVACH</strong>
         </p>
       </div>
     </div>

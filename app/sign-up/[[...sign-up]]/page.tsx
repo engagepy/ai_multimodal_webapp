@@ -26,6 +26,13 @@ export default function LoginPage() {
           Your privacy is our priority. Start your journey with Kavach A.I. today.
         </p>
       </div>
+      <div className="text-center mt-6 px-4">
+        <p className="text-[#3C3B39]">
+          - Anoushka Jollyy
+          <hr></hr>
+          <strong>Founder KAVACH</strong>
+        </p>
+      </div>
     </div>
   );
 }
