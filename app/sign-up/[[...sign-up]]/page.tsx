@@ -14,7 +14,7 @@ export default function LoginPage() {
           KAVACH A.I.
         </h1>
         <p className="text-sm md:text-lg lg:text-xl text-[#6D6C6A] mt-2">
-          A new ally in your journey to wellness - safe, secure, and understanding.
+          A new ally in your journey to mental wellness - safe, secure, and understanding.
         </p>
       </div>
       <div className="w-full flex justify-center">
