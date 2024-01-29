@@ -316,3 +316,30 @@ body {
   animation: shift 8s ease infinite;
   box-shadow: 0 0 8px #FFBBF4, 0 0 12px #E9FC88;
 }
+
+@keyframes textGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dynamic-gradient-text {
+  font-size: 2.25rem; /* 36px */
+  line-height: 1;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #2A8D5C, #DE4FF3, #ECFD33);
+  background-size: 200% 200%;
+  animation: textGradientShift 8s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive font sizes */
+@media (min-width: 640px) { /* sm */
+  .dynamic-gradient-text { font-size: 3.75rem; /* 60px */ }
+}
+
+@media (min-width: 768px) { /* md */
+  .dynamic-gradient-text { font-size: 4.5rem; /* 72px */ }
+}

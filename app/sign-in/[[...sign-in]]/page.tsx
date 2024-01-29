@@ -11,7 +11,7 @@ export default function LoginPage() {
       </Head>
       <div className="text-center mb-10 px-2">
         {/* Updated h1 tag with brand colors */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#2A8D5C] via-[#DE4FF3] to-[#ECFD33]">
+        <h1 className="dynamic-gradient-text">
           Kavach A.I.
         </h1>
         <p className="text-sm md:text-lg lg:text-xl text-[#6D6C6A] mt-2">
