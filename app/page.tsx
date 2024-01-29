@@ -53,7 +53,7 @@ export default function Home() {
           <div className='flex justify-between'>
             <div className='flex items-center gap-2'>
             <Image src='/logo.png' className='w-18 h-8 md:w-25 md:h-10' width='100' height='100' alt="Logo" />
-              <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'>A.I. 😇</h1>
+              {/* <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'></h1> */}
             </div>
             <div className='flex gap-1'>
               <ThemeButton />
