@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-primary: #FFFFFF;
+  --text-primary-inverse: #090909;
+  --text-primary-main: #2A8D5C; /* Updated to use the gradient start color for primary text in light mode */
+  --text-secondary: #DE4FF3; /* Updated to use the gradient middle color for secondary text */
+  --text-secondary-inverse: #494A4D;
+  --background-bubble-primary: #611C9B;
+  --background-bubble-secondary: #F7F7F7;
+  --border-primary: #CED0D2;
+  --background-soft: #F3E5F5;
+  --background-start-rgb: 163, 238, 152; /* Updated to login page gradient start */
+  --background-end-rgb: 233, 252, 136; /* Updated to login page gradient end */
+  --text-tertiary: #6B6F73;
+  --shadow-primary: 0px 6px 16px 0px rgba(10, 10, 10, 0.12), 0px 4px 14px 0px rgba(10, 10, 10, 0.08), 0px 8px 10px 0px rgba(10, 10, 10, 0.08);
+  --processing-dot-size: 4px;
+}
+
+.dark {
+  --text-primary: #090909;
+  --text-primary-inverse: #FFFFFF;
+  --text-primary-main: #9946B9; /* Preserved for dark mode primary text */
+  --text-secondary: #494A4D;
+  --text-secondary-inverse: #A6AAAE;
+  --background-bubble-primary: #BA68C8; /* Preserved for dark mode bubbles */
+  --background-bubble-secondary: #232324;
+  --background-soft: #200033;
+  --border-primary: #262626;
+  --background-start-rgb: 23, 23, 23; /* Preserved for dark mode gradient start */
+  --background-end-rgb: 28, 28, 28; /* Preserved for dark mode gradient end */
+}
+
+body {
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  transition: background-color 0.3s ease; /* Smooth transition for mode switch */
+}
+
+.chatbot-section {
+  background-color: var(--text-primary);
+  box-shadow: var(--shadow-primary);
+  border: 1px solid var(--border-primary);
+}
+
+.chatbot-header {
+  border-bottom: 1px solid var(--border-primary);;
+}
+
+.chatbot-header svg {
+  fill: var(--text-primary-inverse);
+}
+
+.chatbot-text-primary {
+  color: var(--text-primary-inverse);
+}
+
+.chatbot-text-secondary {
+  color: var(--text-secondary);
+}
+
+.chatbot-text-secondary-inverse {
+  color: var(--text-secondary-inverse);
+}
+
+.chatbot-text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.chatbot-input {
+  color: var(--text-primary-inverse);
+  border: 1px solid var(--border-primary);
+}
+
+.chatbot-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.chatbot-send-button {
+  background-color: var(--text-primary-inverse);
+  color: var(--text-primary);
+}
+
+.chatbot-send-button svg {
+  fill: var(--text-primary);
+}
+
+.chatbot-button-primary {
+  background-color: var(--text-primary-inverse);
+  color: var(--text-primary);
+}
+
+.chatbot-button-secondary {
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary-inverse);
+}
+
+.chatbot-faq-link {
+  border: 1px solid var(--border-primary);
+  border-radius: 24px;
+  color: var(--background-bubble-primary);
+}
+
+.chatbot-faq-link svg {
+  fill: var(--text-tertiary);
+}
+
+.talk-bubble {
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  color: var(--text-secondary-inverse);
+  background-color: var(--background-bubble-secondary);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+}
+
+.talk-bubble.user {
+  text-align: right;
+  color: var(--text-primary);
+  background-color: var(--background-bubble-primary);
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+}
+
+.talk-bubble svg {
+  position: absolute;
+  left: -1px;
+  bottom: 2px;
+  transform: translateY(100%) rotateY(180deg);
+  fill: var(--background-bubble-secondary);
+}
+
+.talk-bubble.user svg {
+  right: -1px;
+  left: auto;
+  bottom: 2px;
+  transform: translateY(100%);
+  fill: var(--background-bubble-primary);
+}
+
+.dot-flashing {
+  position: relative;
+  /* padding-left: 8px; */
+  /* padding-right: 8px; */
+  width: var(--processing-dot-size);
+  height: var(--processing-dot-size);
+  border-radius: 100%;
+  background-color: var(--text-tertiary);
+  color: var(--text-tertiary);
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -6px;
+  width: var(--processing-dot-size);
+  height: var(--processing-dot-size);
+  border-radius: 100%;
+  background-color: var(--text-tertiary);
+  color: var(--text-tertiary);
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 6px;
+  width: var(--processing-dot-size);
+  height: var(--processing-dot-size);
+  border-radius: 100%;
+  background-color: var(--text-tertiary);
+  color: var(--text-tertiary);
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: var(--text-tertiary);
+  }
+
+  50%,
+  100% {
+    background-color: rgba(152, 128, 255, 0.2);
+  }
+}
+
+.prompt-button {
+  background-color: var(--background-soft);
+  color: var(--text-primary-main);
+}
+
+/* Toggle Styles */
+.toggle-background {
+  background-color: var(--background-bubble-primary);
+}
+
+.toggle-boarder {
+  border: 1px solid var(--background-bubble-primary);
+}
+
+.vercel-link {
+  color: var(--text-primary-inverse);
+  background-color: var(--text-primary);
+  border-color: var(--border-primary);
+}
+
+.vercel-link hr {
+  border-color: var(--border-primary);
+}
+
+
+/* ... existing styles ... */
+
+/* Configure Modal Styles */
+.configure-modal-bg {
+  background-color: var(--background-bubble-secondary); /* Light theme background */
+}
+
+.dark .configure-modal-bg {
+  background-color: var(--background-bubble-primary); /* Dark theme background */
+}
+
+.configure-header {
+  color: var(--text-primary-main); /* Primary text color */
+}
+
+.configure-close-btn {
+  color: var(--text-secondary); /* Secondary text color */
+}
+
+.configure-dropdown-label {
+  color: var(--text-primary); /* Dropdown label color */
+}
+
+.configure-dropdown {
+  border-color: var(--border-primary); /* Dropdown border color */
+  background-color: var(--background-soft); /* Dropdown background color */
+}
+
+.configure-toggle-label {
+  color: var(--text-primary); /* Toggle label color */
+}
+
+.configure-toggle-bg {
+  background-color: var(--background-soft); /* Toggle background color */
+}
+
+.configure-button-secondary {
+  background-color: var(--background-bubble-secondary); /* Secondary button background color */
+  color: var(--text-primary-main); /* Secondary button text color */
+}
+
+.configure-button-primary {
+  background-color: var(--text-primary-main); /* Primary button background color */
+  color: var(--background-bubble-secondary); /* Primary button text color */
+}
+
+/* ... any other styles you may need to add or adjust ... */
+/* ... existing styles ... */
+
+/* Adjustments for dark mode */
+.dark .configure-modal-bg {
+  background-color: var(--background-bubble-primary); /* Dark theme background for modal */
+}
+
+.dark .configure-header {
+  color: var(--text-primary-inverse); /* Dark theme color for header text */
+}
+
+.dark .configure-close-btn {
+  color: var(--text-secondary-inverse); /* Dark theme color for close button */
+}
+
+.dark .configure-button-secondary {
+  background-color: var(--background-soft); /* Dark theme secondary button background */
+  color: var(--text-primary-inverse); /* Dark theme secondary button text color */
+}
+
+.dark .configure-button-primary {
+  background-color: var(--text-primary-main); /* Dark theme primary button background */
+  color: var(--text-primary-inverse); /* Dark theme primary button text color */
+}
+
+/* ... rest of the styles ... */
+.cl-logoImage {
+  /* Set width and height to a larger size */
+  width: 50%; /* or a specific size in pixels, e.g., 200px */
+  height: auto; /* maintain aspect ratio */
+
+  /* Center the logo image */
+  display: block;
+  margin-right: auto;
+}
+
+@keyframes shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glowing-gradient-hr {
+  border: 0;
+  height: 2px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, #A3EE98 0%, #FFBBF4 50%, #E9FC88 100%);
+  animation: shift 8s ease infinite;
+  box-shadow: 0 0 8px #FFBBF4, 0 0 12px #E9FC88;
+}
+
+@keyframes textGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dynamic-gradient-text {
+  font-size: 2.25rem; /* 36px */
+  line-height: 1;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #2A8D5C, #DE4FF3, #ECFD33);
+  background-size: 200% 200%;
+  animation: textGradientShift 8s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive font sizes */
+@media (min-width: 640px) { /* sm */
+  .dynamic-gradient-text { font-size: 3.75rem; /* 60px */ }
+}
+
+@media (min-width: 768px) { /* md */
+  .dynamic-gradient-text { font-size: 4.5rem; /* 72px */ }
+}
