@@ -78,9 +78,11 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
           : isActive == false && (
               <button
                 onClick={handleAudio}
-                className="chatbot-record-button flex rounded-md items-center justify-center px-2.5"
+                className="chatbot-record-button flex rounded-md items-center justify-center px-2.5
+              
+                "
               >
-                <Volume2 />
+                <Volume2 className="chatbot-text-secondary-inverse" />
               </button>
             )}
       </div>
