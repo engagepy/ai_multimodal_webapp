@@ -1,8 +1,15 @@
 import Link from "next/link";
-import { forwardRef, JSXElementConstructor, useMemo, RefObject } from "react";
+import {
+  forwardRef,
+  JSXElementConstructor,
+  useMemo,
+  RefObject,
+  useState,
+} from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Volume2 } from "lucide-react";
+import { ClipLoader } from "react-spinners";
 
 const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
   { content, isActive },
@@ -10,6 +17,8 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
 ) {
   const { role } = content;
   const isUser = role === "user";
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const playReceivedAudioStream = async (audioData: any) => {
     try {
@@ -36,6 +45,7 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
   };
 
   const handleAudio = () => {
+    setIsLoading(true);
     fetch("/api/audio", {
       method: "POST",
       headers: {
@@ -43,6 +53,7 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
       },
       body: JSON.stringify({ messages: [content] }),
     }).then((data) => {
+      setIsLoading(false);
       playReceivedAudioStream(data);
     });
   };
@@ -82,7 +93,17 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
               
                 "
               >
-                <Volume2 className="chatbot-text-secondary-inverse" />
+                {isLoading ? (
+                  <ClipLoader
+                    size={20}
+                    className="chatbot-text-secondary-inverse"
+                  />
+                ) : (
+                  <Volume2
+                    size={20}
+                    className="chatbot-text-secondary-inverse"
+                  />
+                )}
               </button>
             )}
       </div>

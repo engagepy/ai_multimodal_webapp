@@ -9,6 +9,11 @@ import PromptSuggestionRow from "../components/PromptSuggestions/PromptSuggestio
 import ThemeButton from "../components/ThemeButton";
 import useConfiguration from "./hooks/useConfiguration";
 import { UserButton } from "@clerk/nextjs";
+import { Mic, SendHorizontal } from "lucide-react";
+import { start } from "repl";
+import { on } from "events";
+
+let recorder = null;
 
 export default function Home() {
   const [streamActive, setStreamActive] = useState(true);
@@ -24,6 +29,7 @@ export default function Home() {
 
   const messagesEndRef = useRef(null);
   const [configureOpen, setConfigureOpen] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -48,10 +54,104 @@ export default function Home() {
   };
 
   const [showNotification, setShowNotification] = useState(false);
+  const [timeoutt, setTimeoutt] = useState(null);
+
+  const startRecording = () => {
+    let constraints = {
+      audio: true,
+      video: false,
+    };
+
+    navigator.mediaDevices
+      .getUserMedia(constraints)
+      .then(function (stream) {
+        let audioContext = new AudioContext();
+        console.log("Sample rate: " + audioContext.sampleRate);
+
+        let gumStream = stream;
+        let input = audioContext.createMediaStreamSource(stream);
+        console.log(
+          "Media stream created. Sample rate of input stream: " +
+            audioContext.sampleRate
+        );
+
+        recorder = new MediaRecorder(stream);
+        let chunks = [];
+
+        recorder.ondataavailable = function (e) {
+          chunks.push(e.data);
+        };
+
+        recorder.onstop = function (e) {
+          let blob = new Blob(chunks, { type: "audio/wav; codecs=opus" });
+          // Now you can do something with the recorded audio blob, like saving it or processing it.
+          console.log("Recording stopped");
+          console.log(blob);
+          onStop(blob);
+        };
+
+        recorder.start();
+        console.log("Recording started");
+      })
+      .catch(function (err) {
+        console.log("Error in getUserMedia: " + err);
+      });
+  };
+
+  const stopRecording = () => {
+    console.log("stopButton clicked");
+
+    recorder.stop(); //stop microphone access
+    setIsRecording(false);
+  };
+
+  const sendAudio = async (audio) => {
+    const response = await fetch("/api/audio1", {
+      method: "POST",
+      body: audio,
+    });
+    const data = await response.json();
+    const msg: Message = {
+      id: crypto.randomUUID(),
+      content: data.transcription,
+      role: "user",
+    };
+    append(msg, { options: { body: { useRag, llm, similarityMetric } } });
+  };
+
+  const onStop = (blob) => {
+    console.log("uploading...");
+
+    let data = new FormData();
+
+    data.append("text", "this is the transcription of the audio file");
+    data.append("wavfile", blob, "recording.wav");
+
+    const config = {
+      headers: { "content-type": "multipart/form-data" },
+    };
+    sendAudio(data);
+  };
 
   const handleMicrophoneClick = () => {
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
+    console.log("Microphone clicked", isRecording);
+    if (isRecording) {
+      setIsRecording(false);
+      stopRecording();
+      clearTimeout(timeoutt);
+      console.log("Timeout cleared");
+      setShowNotification(false);
+    } else {
+      setShowNotification(true);
+      setIsRecording(true);
+      startRecording();
+      setTimeoutt(
+        setTimeout(() => {
+          setShowNotification(false);
+          stopRecording();
+        }, 15000)
+      );
+    }
   };
   return (
     <>
@@ -61,7 +161,7 @@ export default function Home() {
           showNotification ? "translate-y-0" : "-translate-y-20"
         } z-50 transition-all bg-yellow-500 text-white py-2 px-4 rounded-md shadow-lg`}
       >
-        Coming soon, keep sharing!
+        Recording...
       </div>
       <main className="flex h-screen flex-col items-center justify-center">
         <section className="chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full rounded-md p-2 md:p-6">
@@ -143,6 +243,8 @@ export default function Home() {
                   d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
                 />
               </svg>
+
+              {/* <SendHorizontal className="chatbot-text-secondary-inverse" /> */}
             </button>
 
             {/* Record Button */}
@@ -150,16 +252,19 @@ export default function Home() {
               onClick={handleMicrophoneClick}
               className="chatbot-record-button flex rounded-md items-center justify-center px-2.5"
             >
-              <svg width="20" height="20" viewBox="0 0 20 20">
-                <circle
-                  cx="10"
-                  cy="10"
-                  r="9"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="red"
-                />
-              </svg>
+              {isRecording ? (
+                // <SendHorizontal className="chatbot-text-secondary-inverse bg-white" />
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <path
+                    fill="yellow"
+                    stroke="black"
+                    strokeWidth="0.5"
+                    d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
+                  />
+                </svg>
+              ) : (
+                <Mic className="chatbot-text-secondary-inverse" />
+              )}
             </button>
           </form>
 
