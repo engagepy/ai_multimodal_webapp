@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.5",
     "@clerk/themes": "^1.7.9",
+    "@heroicons/react": "^1.0.6",
     "@types/node": "^20.8.10",
     "ai": "^2.2.20",
     "geist": "^1.1.0",
