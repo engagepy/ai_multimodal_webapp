@@ -204,21 +204,20 @@ body {
 .prompt-button {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #bcc4ff;
+  background-color: #FFBBF4;
   color: #0b0a07;
 }
 .prompt-button1 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: white;
-  border-color: #3c3b39;
-  border: 1px solid;
+  background-color: #FF5A10;
+
   color: #00491e;
 }
 .prompt-button2 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #2f1847;
+  background-color: #2A8D5C;
   /* border-color: #3c3b39;
   border: 1px solid; */
   color: white;
@@ -226,7 +225,7 @@ body {
 .prompt-button3 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #0b0a07;
+  background-color: #A66CFE;
   color: white;
 }
 
