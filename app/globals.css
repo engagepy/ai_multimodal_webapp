@@ -422,3 +422,14 @@ body {
     font-size: 4.5rem; /* 72px */
   }
 }
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start 0s infinite;
+}

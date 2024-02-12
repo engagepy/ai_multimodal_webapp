@@ -7,10 +7,24 @@ import "tailwindcss/tailwind.css";
 import Image from "next/image";
 import Features from "../../../components/features";
 import { MenuIcon } from '@heroicons/react/solid';
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 export default function EnterpriseLandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [typedText, setTypedText] = useState('');
+  const fullText = 'A.I. Empowering the Next Generation';
+  const typingDelay = 3000 / fullText.length; // Calculated delay per character
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setTypedText((prev) => prev + fullText.charAt(index));
+      index++;
+      if (index === fullText.length) clearInterval(intervalId);
+    }, typingDelay);
+
+    return () => clearInterval(intervalId);
+  }, [fullText, typingDelay]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#A3EE98] via-[#FFBBF4] to-[#E9FC88]">
@@ -18,18 +32,19 @@ export default function EnterpriseLandingPage() {
         <title>Kavach A.I. - Empowering Mental Wellness</title>
       </Head>
       
-      {/* Navbar */}
-      <nav className="flex justify-between items-center p-4">
-        <div className="flex items-center">
+      <nav className="flex justify-between items-center p-4 w-full">
+        <div className="flex justify-start">
           <Image alt="Kavach Logo" height={100} width={100} src="/kavach.gif" />
         </div>
+        {/* Mobile menu button */}
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <MenuIcon className="h-6 w-6 text-white" />
           </button>
         </div>
-        <div className={`absolute top-0 left-0 w-full bg-gradient-to-b from-[#A3EE98] p-4 ${isMenuOpen ? 'block' : 'hidden'} md:block md:static md:bg-transparent`}>
-          <div className="md:flex md:justify-center md:space-x-4">
+        {/* Navigation links container */}
+        <div className="hidden md:flex md:justify-center md:items-center md:w-full">
+          <div className="flex justify-around w-full max-w-2xl"> {/* Adjust max-width as needed */}
             <a href="#enterprises" className="text-[#6D6C6A] hover:underline">Enterprises</a>
             <a href="#schools" className="text-[#6D6C6A] hover:underline">Schools</a>
             <a href="#institutes" className="text-[#6D6C6A] hover:underline">Institutes</a>
@@ -37,12 +52,38 @@ export default function EnterpriseLandingPage() {
             <a href="#plans" className="text-[#6D6C6A] hover:underline">Plans</a>
           </div>
         </div>
-      </nav>
+        {/* Mobile menu */}
+        <div className={`absolute top-0 right-0 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 bg-black text-white h-full z-10 transition-transform duration-300 ease-in-out`}>
+            <div className="p-4 flex justify-end">
+              <button onClick={() => setIsMenuOpen(false)}>
+                <svg className="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            {/* Logo aligned left with padding below */}
+            <div className="px-4 pb-6">
+              <Image src="/logo.png" alt="Logo" width={100} height={100} layout="fixed" />
+            </div>
+            <div className="flex flex-col justify-start items-start px-4 space-y-4">
+              <a href="#enterprises" className="text-white hover:underline">Enterprises</a>
+              <a href="#schools" className="text-white hover:underline">Schools</a>
+              <a href="#institutes" className="text-white hover:underline">Institutes</a>
+              <a href="#licensing" className="text-white hover:underline">Licensing</a>
+              <a href="#plans" className="text-white hover:underline">Plans</a>
+            </div>
+          </div>
+    </nav>
+
+
+
+
 
       {/* Hero Section */}
       <div className="text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-[#6D6C6A] animate-fade-in-down">
+      <h1 className="text-4xl md:text-6xl font-bold text-[#6D6C6A]">
           A.I. Empowering the Next Generation
+          <span className="animate-blink">|</span> 
         </h1>
       </div>
       {/* Main Content */}
