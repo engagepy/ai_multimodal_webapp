@@ -1,7 +1,6 @@
 "use client";
 
 import { SignIn } from "@clerk/nextjs";
-import { shadesOfPurple } from "@clerk/themes";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -79,7 +78,7 @@ export default function EnterpriseLandingPage() {
       {/* Hero Section */}
       <div className="text-center p-4">
       <h1 className="text-4xl md:text-6xl font-bold text-[#6D6C6A]">
-          A.I. Empowering the Next Generation
+          {typedText}
           <span className="animate-blink">|</span> 
         </h1>
       </div>

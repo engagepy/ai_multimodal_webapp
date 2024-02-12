@@ -38,7 +38,7 @@ export default function Main() {
         <div className="flex w-full lg:w-1/3 justify-center p-4">
     <div className="w-full max-w-xs">
       <h2 className="text-xl font-bold text-[#3C3B39] mb-4">Sign In to Your Account</h2>
-      <SignIn />
+      <SignUp />
       <p className="text-center text-sm text-[#3C3B39] mt-4">
         Join us in making mental wellness accessible.
       </p>
