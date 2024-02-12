@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const speechResponse = await openai.audio.speech.create({
       model: "tts-1",
-      voice: "alloy",
+      voice: "nova",
       input: messages.pop().content,
     });
 
