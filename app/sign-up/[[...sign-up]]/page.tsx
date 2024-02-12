@@ -1,6 +1,7 @@
 import { SignUp } from "@clerk/nextjs";
 import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
@@ -8,11 +9,12 @@ export default function LoginPage() {
       <Head>
         <title>Kavach A.I. - Your Safe Space</title>
       </Head>
+      <Image alt="Logo" height={250} width={250} src="/kavach.gif">
+
+        </Image>
       <div className="text-center mb-10 px-2">
         {/* Updated h1 tag with brand colors */}
-        <h1 className="dynamic-gradient-text">
-          Kavach A.I.
-        </h1>
+        
         <p className="text-sm md:text-lg lg:text-xl text-[#6D6C6A] mt-2">
           A new ally in your journey to mental wellness - safe, secure, and understanding.
         </p>
