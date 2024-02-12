@@ -51,7 +51,7 @@ function Features() {
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
                   Leading certifications, enterprise design, student consulting
-                  strategies, emergency maangement protocols, and on premise scanners.
+                  strategies, emergency mangement protocols, and on premise solutions.
                 </p>
               </div>
             </div>
