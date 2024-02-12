@@ -1,7 +1,7 @@
 import { SignIn } from "@clerk/nextjs";
-import { shadesOfPurple } from '@clerk/themes';
-import Head from 'next/head';
-import 'tailwindcss/tailwind.css';
+import { shadesOfPurple } from "@clerk/themes";
+import Head from "next/head";
+import "tailwindcss/tailwind.css";
 
 export default function LoginPage() {
   return (
@@ -11,11 +11,10 @@ export default function LoginPage() {
       </Head>
       <div className="text-center mb-10 px-2">
         {/* Updated h1 tag with brand colors */}
-        <h1 className="dynamic-gradient-text">
-          Kavach A.I.
-        </h1>
+        <h1 className="dynamic-gradient-text">Kavach A.I.</h1>
         <p className="text-sm md:text-lg lg:text-xl text-[#6D6C6A] mt-2">
-          A new ally in your journey to mental wellness - safe, secure, and understanding!
+          A new ally in your journey to mental wellness - safe, secure, and
+          understanding!
         </p>
       </div>
       <div className="w-full flex justify-center">
@@ -23,8 +22,9 @@ export default function LoginPage() {
       </div>
       <div className="text-center mt-6 px-4">
         <p className="text-[#3C3B39]">
-        &quot;Share your thoughts, and let&apos;s tackle school, home, or any challenges together. 
-            Your privacy is our priority. Start your journey with Kavach A.I. today.&quot;
+          &quot;Share your thoughts, and let&apos;s tackle school, home, or any
+          challenges together. Your privacy is our priority. Start your journey
+          with Kavach A.I. today.&quot;
         </p>
       </div>
       <div className="text-center mt-6 px-4">

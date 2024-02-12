@@ -1,4 +1,3 @@
-
 const PromptSuggestionButton = ({ text, onClick }) => {
   return (
     <button
