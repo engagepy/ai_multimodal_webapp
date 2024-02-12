@@ -111,8 +111,7 @@ function Features() {
                   Education Benefits
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Improved access reduces stress and anxiety
-                  directly result in rising efficiency, interpersonal skills, lower fatalities, improved occupant health, and the potential for
+                  Improved access reduces stress and anxiety. Resulting in postive interpersonal skills, lower fatalities, improved health, and an
                   increased academic value.
                 </p>
               </div>
