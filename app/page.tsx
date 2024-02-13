@@ -178,7 +178,7 @@ export default function Home() {
                 {/* <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'></h1> */}
               </div>
               <div className="flex gap-1">
-                {/* <ThemeButton /> */}
+                <ThemeButton />
                 <button onClick={() => setConfigureOpen(true)}>
                   <svg
                     width="24"
