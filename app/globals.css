@@ -204,20 +204,20 @@ body {
 .prompt-button {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #FFBBF4;
+  background-color: #ffbbf4;
   color: #0b0a07;
 }
 .prompt-button1 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #FF5A10;
+  background-color: #ff5a10;
 
   color: #00491e;
 }
 .prompt-button2 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #2A8D5C;
+  background-color: #2a8d5c;
   /* border-color: #3c3b39;
   border: 1px solid; */
   color: white;
@@ -225,7 +225,7 @@ body {
 .prompt-button3 {
   /* background-color: var(--background-soft);
   color: var(--text-primary-main); */
-  background-color: #A66CFE;
+  background-color: #a66cfe;
   color: white;
 }
 
@@ -238,6 +238,13 @@ body {
   background-color: #2f1847;
   color: #ecfd33;
   border-color: var(--border-primary);
+}
+
+@media (max-width: 30em) {
+  .cl-internal-15m7ds {
+    max-width: calc(-0.75rem + 21rem);
+    margin: 0px;
+  }
 }
 
 /* Toggle Styles */
@@ -422,7 +429,6 @@ body {
     font-size: 4.5rem; /* 72px */
   }
 }
-
 
 @keyframes blink {
   50% {

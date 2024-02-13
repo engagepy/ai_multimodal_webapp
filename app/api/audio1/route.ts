@@ -21,6 +21,7 @@ export async function POST(req: Request) {
       file: file,
       model: "whisper-1",
       response_format: "text",
+      language: "en",
     });
 
     console.log("Speech response:", speechResponse);
