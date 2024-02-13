@@ -9,7 +9,7 @@ const openai = new OpenAI({
 export async function POST(req: Request) {
   try {
     const data = await req.formData();
-    const file: File | null = data.get("webmfile") as unknown as File;
+    const file: File | null = data.get("wavfile") as unknown as File;
 
     if (!file) {
       return NextResponse.json({ success: false });

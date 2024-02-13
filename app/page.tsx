@@ -83,7 +83,7 @@ export default function Home() {
         };
 
         recorder.onstop = function (e) {
-          let blob = new Blob(chunks, { type: "audio/webm; codecs=opus" });
+          let blob = new Blob(chunks, { type: "audio/wav; codecs=opus" });
           // Now you can do something with the recorded audio blob, like saving it or processing it.
           console.log("Recording stopped");
           console.log(blob);
@@ -125,7 +125,7 @@ export default function Home() {
     let data = new FormData();
 
     data.append("text", "this is the transcription of the audio file");
-    data.append("webmfile", blob, "recording.webm");
+    data.append("wavfile", blob, "recording.wav");
 
     const config = {
       headers: { "content-type": "multipart/form-data" },
@@ -161,7 +161,7 @@ export default function Home() {
           showNotification ? "translate-y-0" : "-translate-y-20"
         } z-50 transition-all bg-yellow-500 text-white py-2 px-4 rounded-md shadow-lg`}
       >
-        Recording ...
+        Recording...
       </div>
       <main className="flex h-screen flex-col items-center justify-center">
         <section className="chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full rounded-md p-2 md:p-6">
