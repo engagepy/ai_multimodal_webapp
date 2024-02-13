@@ -169,7 +169,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/logo.png"
+                  src="/green_logo.png"
                   className="w-18 h-8 md:w-25 md:h-10"
                   width="100"
                   height="100"

@@ -34,7 +34,7 @@ export default function EnterpriseLandingPage() {
 
       <nav className="flex justify-between items-center p-4 w-full">
         <div className="flex justify-start">
-          <Image alt="Kavach Logo" height={100} width={100} src="/kavach.gif" />
+          <Image alt="Kavach Logo" height={100} width={100} src="/green_logo.png" />
         </div>
         {/* Mobile menu button */}
         <div className="md:hidden">
@@ -92,7 +92,7 @@ export default function EnterpriseLandingPage() {
           {/* Logo aligned left with padding below */}
           <div className="px-4 pb-6">
             <Image
-              src="/logo.png"
+              src="/green_logo.png"
               alt="Logo"
               width={100}
               height={100}
