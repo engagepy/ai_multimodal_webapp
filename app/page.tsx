@@ -83,7 +83,7 @@ export default function Home() {
         };
 
         recorder.onstop = function (e) {
-          let blob = new Blob(chunks, { type: "audio/wav; codecs=opus" });
+          let blob = new Blob(chunks, { type: "audio/webm; codecs=opus" });
           // Now you can do something with the recorded audio blob, like saving it or processing it.
           console.log("Recording stopped");
           console.log(blob);
@@ -125,7 +125,7 @@ export default function Home() {
     let data = new FormData();
 
     data.append("text", "this is the transcription of the audio file");
-    data.append("wavfile", blob, "recording.wav");
+    data.append("webmfile", blob, "recording.webm");
 
     const config = {
       headers: { "content-type": "multipart/form-data" },
