@@ -123,7 +123,7 @@ export default function EnterpriseLandingPage() {
       <div className="text-center p-4">
         <h1 className="text-4xl md:text-6xl font-bold text-[#6D6C6A]">
           A.I. Empowering the Next Generation
-          <span className="animate-blink">|</span>
+          <span className="animate-blink text-[#a66cfe]">|</span>
         </h1>
       </div>
       {/* Main Content */}
