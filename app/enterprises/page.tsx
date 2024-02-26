@@ -10,7 +10,7 @@ import Accordion from "../../components/Accordianenterprise";
 import Pricing from "../../components/Pricingenterprise";
 import React from "react";
 
-const enterprisePage = () => {
+const EnterprisePage: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   // Calculated delay per character
 
@@ -188,4 +188,4 @@ const enterprisePage = () => {
   );
 };
 
-export default enterprisePage;
+export default EnterprisePage;

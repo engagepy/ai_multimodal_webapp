@@ -10,7 +10,7 @@ import Accordion from "../../components/Accordianenterprise";
 import Pricing from "../../components/Pricingenterprise";
 import React from "react";
 
-const institutePage = () => {
+const InstitutePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   // Calculated delay per character
 
@@ -188,4 +188,4 @@ const institutePage = () => {
   );
 };
 
-export default institutePage;
+export default InstitutePage;

@@ -8,7 +8,7 @@ import Hero from "../../components/Hero";
 import Service from "../../components/Service";
 import About1 from "../../components/About";
 
-const aboutPage = () => {
+const AboutPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Calculated delay per character
 
@@ -109,4 +109,4 @@ const aboutPage = () => {
   );
 };
 
-export default aboutPage;
+export default AboutPage;
