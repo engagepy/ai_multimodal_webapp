@@ -365,7 +365,7 @@ body {
   margin-right: auto;
 }
 
-@keyframes shift {
+/* @keyframes shift {
   0% {
     background-position: 0% 50%;
   }
@@ -375,7 +375,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 .glowing-gradient-hr {
   border: 0;

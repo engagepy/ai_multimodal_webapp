@@ -45,20 +45,17 @@ export default function EnterpriseLandingPage() {
           <div className="flex justify-around w-full max-w-2xl">
             {" "}
             {/* Adjust max-width as needed */}
-            <a href="#enterprises" className="text-[#6D6C6A] hover:underline">
+            <a href="/" className="text-black hover:underline">
+              Home
+            </a>
+            <a href="/about" className="text-black hover:underline">
+              About Us
+            </a>
+            <a href="/enterprises" className="text-black hover:underline">
               Enterprises
             </a>
-            <a href="#schools" className="text-[#6D6C6A] hover:underline">
-              Schools
-            </a>
-            <a href="#institutes" className="text-[#6D6C6A] hover:underline">
-              Institutes
-            </a>
-            <a href="#licensing" className="text-[#6D6C6A] hover:underline">
-              Licensing
-            </a>
-            <a href="#plans" className="text-[#6D6C6A] hover:underline">
-              Plans
+            <a href="/institutes" className="text-black hover:underline">
+              Educational Institutes
             </a>
           </div>
         </div>
@@ -66,7 +63,7 @@ export default function EnterpriseLandingPage() {
         <div
           className={`fixed top-0 right-0 transform ${
             isMenuOpen ? "translate-x-0" : "translate-x-full "
-          } md:hidden  w-64 bg-black text-white h-full z-10 transition-transform duration-300 ease-in-out`}
+          } md:hidden  w-64 bg-gray-800 text-white h-full z-10 transition-transform duration-300 ease-in-out`}
         >
           <div className="p-4 flex justify-end">
             <button onClick={() => setIsMenuOpen(false)}>
@@ -98,20 +95,17 @@ export default function EnterpriseLandingPage() {
             />
           </div>
           <div className="flex flex-col justify-start items-start px-4 space-y-4">
-            <a href="#enterprises" className="text-white hover:underline">
+            <a href="/" className="text-white hover:underline">
+              Home
+            </a>
+            <a href="/about" className="text-white hover:underline">
+              About
+            </a>
+            <a href="/enterprises" className="text-white hover:underline">
               Enterprises
             </a>
-            <a href="#schools" className="text-white hover:underline">
-              Schools
-            </a>
-            <a href="#institutes" className="text-white hover:underline">
+            <a href="/institutes" className="text-white hover:underline">
               Institutes
-            </a>
-            <a href="#licensing" className="text-white hover:underline">
-              Licensing
-            </a>
-            <a href="#plans" className="text-white hover:underline">
-              Plans
             </a>
           </div>
         </div>
