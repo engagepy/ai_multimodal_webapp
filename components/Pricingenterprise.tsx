@@ -36,7 +36,7 @@ const Pricing = () => {
               subscription="year"
               description="Perfect for using in a personal website or a client project."
               buttonText="Choose Personal"
-              active={false} // Add the 'active' property with a value
+              active // Add the 'active' property with a value
             >
               <List>1 User</List>
               <List>All UI components</List>
@@ -66,7 +66,7 @@ const Pricing = () => {
               subscription="year"
               description="Perfect for using in a personal website or a client project."
               buttonText="Choose Professional"
-              active={false}
+              active
             >
               <List>Unlimited User</List>
               <List>All UI components</List>

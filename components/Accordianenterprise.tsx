@@ -75,9 +75,9 @@ const Accordion = () => {
               y2="-418.681"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3056D3" stop-opacity="0.36" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+              <stop stopColor="#3056D3" stopOpacity="0.36" />
+              <stop offset="1" stopColor="#F5F2FD" stopOpacity="0" />
+              <stop offset="1" stopColor="#F5F2FD" stopOpacity="0.096144" />
             </linearGradient>
           </defs>
         </svg>
