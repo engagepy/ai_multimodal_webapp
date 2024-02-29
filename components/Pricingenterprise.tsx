@@ -2,7 +2,7 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <section className="relative z-10 overflow-hidden pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]">
+    <section className="relative  overflow-hidden pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className=" flex flex-wrap">
           <div className="w-full px-4">
@@ -77,7 +77,7 @@ const PricingCard = ({
   return (
     <>
       <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] border-2 border-stroke bg-white px-8 py-10 shadow-pricing dark:border-dark-3 dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+        <div className="relative  mb-10 overflow-hidden rounded-[10px] border-2 border-stroke bg-white px-8 py-10 shadow-pricing dark:border-dark-3 dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
           <span className="mb-3 block text-lg font-semibold text-primary">
             {type}
           </span>
