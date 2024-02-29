@@ -6,23 +6,29 @@ const Service = () => {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <span className="mb-2 block text-lg font-semibold text-primary">
-                Our Services
+                What we Offer?
               </span>
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-[#2A8D5C] sm:text-4xl md:text-[40px]">
-                What We Offer
+                Our Goals
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+                Join the community, feel empowered.
               </p>
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-wrap">
+        <div
+          className=" 
+          flex flex-wrap
+          
+
+        
+        "
+        >
           <ServiceCard
-            title="Refreshing Design"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
+            title="Mental Health Care"
+            details="To provide mental health care to an increasing number of cases."
             icon={
               <svg
                 width="36"
@@ -39,8 +45,8 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Based on Tailwind CSS"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
+            title="Mental Health Services"
+            details="Resolve disjointed Mental Health Services"
             icon={
               <svg
                 width="36"
@@ -59,8 +65,8 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="100+ Components"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
+            title="Smooth Communication"
+            details="Facilitate smooth communication"
             icon={
               <svg
                 width="36"
@@ -89,8 +95,8 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Speed Optimized"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
+            title="AI Integration"
+            details="Create an ecosystem of both healthcare professionals and AI to provide the best solution possible."
             icon={
               <svg
                 width="36"
@@ -110,46 +116,6 @@ const Service = () => {
               </svg>
             }
           />
-          <ServiceCard
-            title="Fully Customizable"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
-            icon={
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M30.0937 21.8251L29.6437 21.6001L30.2062 21.2626C31.3312 20.5876 31.95 19.4063 31.95 18.0563C31.95 16.7626 31.2187 15.5813 30.0937 14.9063L28.9125 14.2313L30.2062 13.4438C31.3312 12.7688 31.95 11.5876 31.95 10.2376C31.95 8.94385 31.2187 7.7626 30.0937 7.14385L19.9125 1.4626C18.7875 0.843848 17.3812 0.843848 16.3125 1.4626L5.84999 7.5376C4.72499 8.2126 4.04999 9.39385 4.04999 10.6876C4.04999 11.9813 4.72499 13.2188 5.84999 13.8376L7.08749 14.5688L5.84999 15.3001C4.72499 15.9751 4.04999 17.1563 4.04999 18.4501C4.04999 19.7438 4.72499 20.9813 5.84999 21.6001L6.35624 21.8813L5.84999 22.1626C4.72499 22.8376 3.99374 24.0188 3.99374 25.3126C3.99374 26.6626 4.66874 27.8438 5.79374 28.4626L16.1437 34.4813C16.7062 34.8188 17.325 34.9876 18 34.9876C18.675 34.9876 19.35 34.8188 19.9125 34.4251L30.2625 28.1251C31.3875 27.4501 32.0062 26.2688 32.0062 24.9188C31.95 23.6251 31.275 22.4438 30.0937 21.8251ZM6.52499 10.6876C6.52499 10.5188 6.58124 10.0126 7.08749 9.73135L17.55 3.65635C17.8875 3.43135 18.3375 3.43135 18.675 3.65635L28.9125 9.3376C29.4187 9.61885 29.475 10.1251 29.475 10.2938C29.475 10.4626 29.4187 10.9688 28.9125 11.3063L18.6187 17.6626C18.2812 17.8876 17.8312 17.8876 17.4375 17.6626L7.08749 11.6438C6.58124 11.3626 6.52499 10.8563 6.52499 10.6876ZM7.08749 17.4938L9.56249 16.0313L16.1437 19.8563C16.7062 20.1938 17.325 20.3626 18 20.3626C18.675 20.3626 19.35 20.1938 19.9125 19.8001L26.4375 15.8063L28.8562 17.1563C29.3625 17.4376 29.4187 17.9438 29.4187 18.1126C29.4187 18.2813 29.3625 18.7876 28.8562 19.1251L18.6187 25.4251C18.2812 25.6501 17.8312 25.6501 17.4375 25.4251L7.08749 19.4063C6.58124 19.1251 6.52499 18.6188 6.52499 18.4501C6.52499 18.2813 6.58124 17.7751 7.08749 17.4938ZM28.9125 25.9876L18.6187 32.3438C18.2812 32.5688 17.8312 32.5688 17.4375 32.3438L7.08749 26.3251C6.58124 26.0438 6.52499 25.5376 6.52499 25.3688C6.52499 25.2001 6.58124 24.6938 7.08749 24.4126L8.83124 23.4001L16.2 27.6751C16.7625 28.0126 17.3812 28.1813 18.0562 28.1813C18.7312 28.1813 19.4062 28.0126 19.9687 27.6188L27.225 23.1751L28.9125 24.0751C29.4187 24.3563 29.475 24.8626 29.475 25.0313C29.475 25.2001 29.4187 25.7063 28.9125 25.9876Z"
-                  fill="white"
-                />
-              </svg>
-            }
-          />
-          <ServiceCard
-            title="Regular Updates"
-            details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
-            icon={
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.725 16.3124C4.89375 16.3124 5.11875 16.2562 5.2875 16.1999L11.5312 14.0062C12.2062 13.7812 12.5437 13.0499 12.3187 12.3749C12.0937 11.6999 11.3625 11.3624 10.6875 11.5874L6.80625 12.9374C8.6625 8.0999 13.3875 4.8374 18.7875 4.8374C24.6938 4.8374 29.8125 8.7749 31.275 14.3999C31.4437 15.0749 32.1187 15.4687 32.7937 15.2999C33.4687 15.1312 33.8625 14.4562 33.6938 13.7812C31.95 7.03115 25.8187 2.30615 18.7312 2.30615C12.4312 2.30615 6.8625 6.01865 4.55625 11.5874L3.375 8.2124C3.15 7.5374 2.41875 7.1999 1.74375 7.4249C1.06875 7.6499 0.73125 8.38115 0.95625 9.05615L3.09375 15.1874C3.43125 15.9187 4.05 16.3124 4.725 16.3124Z"
-                  fill="white"
-                />
-                <path
-                  d="M34.9312 27.9562L32.625 21.9375C32.4562 21.5437 32.175 21.2062 31.7812 21.0375C31.3875 20.8687 30.9375 20.8687 30.5437 21.0375L24.3562 23.3999C23.6812 23.6249 23.4 24.3562 23.625 25.0312C23.85 25.7062 24.5813 25.9875 25.2563 25.7625L29.1375 24.3C26.8875 28.4062 22.5 31.1062 17.6062 31.1062C12.0375 31.1062 7.14375 27.6187 5.4 22.4437C5.175 21.7687 4.44375 21.4312 3.825 21.6562C3.15 21.8812 2.8125 22.6124 3.0375 23.2312C5.11875 29.4187 10.9687 33.5812 17.6062 33.5812C23.4 33.5812 28.6312 30.375 31.275 25.425L32.5688 28.8562C32.7375 29.3625 33.2437 29.6437 33.75 29.6437C33.9187 29.6437 34.0312 29.6437 34.2 29.5312C34.875 29.3625 35.1562 28.6312 34.9312 27.9562Z"
-                  fill="white"
-                />
-              </svg>
-            }
-          />
         </div>
       </div>
     </section>
@@ -158,20 +124,42 @@ const Service = () => {
 
 export default Service;
 
+// export const ServiceCard = ({ icon, title, details }) => {
+//   return (
+//     <>
+//       <div className="w-full px-4 md:w-1/2 lg:w-1/4 ">
+//         <div
+//           className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10 border border-[#2A8D5C]
+//         "
+//         >
+//           <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-[#2A8D5C]">
+//             {icon}
+//           </div>
+//           <h4 className="mb-[14px] text-2xl font-semibold text-[#2A8D5C]">
+//             {title}
+//           </h4>
+//           <p className="mb-8   text-[#6D6C6A]">{details}</p>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
 export const ServiceCard = ({ icon, title, details }) => {
   return (
-    <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3 ">
-        <div className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10 border border-[#2A8D5C]">
-          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-[#2A8D5C]">
-            {icon}
-          </div>
-          <h4 className="mb-[14px] text-2xl font-semibold text-[#2A8D5C]">
-            {title}
-          </h4>
-          <p className="mb-8   text-[#6D6C6A]">{details}</p>
+    <div className="w-full px-4 md:w-1/2 lg:w-1/4 flex py-2">
+      <div
+        className="mb-9 flex flex-col rounded-[20px] bg-white p-8 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10 border border-[#2A8D5C]"
+        style={{ height: "100%" }}
+      >
+        <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-[#2A8D5C]">
+          {icon}
         </div>
+        <h4 className="mb-[14px] text-2xl font-semibold text-[#2A8D5C]">
+          {title}
+        </h4>
+        <p className="mb-2   text-[#6D6C6A]">{details}</p>
       </div>
-    </>
+    </div>
   );
 };

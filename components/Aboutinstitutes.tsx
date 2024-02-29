@@ -1,6 +1,6 @@
 import React from "react";
 
-const About2 = () => {
+const About3 = () => {
   return (
     <>
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[70px]">
@@ -9,13 +9,15 @@ const About2 = () => {
             <div className="w-full px-4 lg:w-1/2 xl:w-2/2">
               <div className="mt-10 lg:mt-0">
                 <h2 className="mb-5 text-3xl font-bold text-[#2A8D5C] sm:text-[40px]/[48px] text-center">
-                  Invest in your most valuable asset - your mind
+                  Empower your mind, one step at a time
                 </h2>
                 <span className="block w-20 h-1 mx-auto mb-8 bg-[#2A8D5C] rounded-full"></span>
                 <p className="mb-8 text-lg text-center text-[#6D6C6A]">
-                  Depression interferes with a person’s ability to complete
-                  physical job tasks about 20% of the time and reduces cognitive
-                  performance about 35% of the time.
+                  Both Parents and school administration play a vital role in
+                  evaluating, maintaining and improving the mental health of
+                  students. As usually students feel hesitant towards sharing
+                  their minds with their parents or teachers, it is very
+                  difficult to know exactly the state of their mental health.
                 </p>
               </div>
             </div>
@@ -32,9 +34,9 @@ const About2 = () => {
                 </div>
               </div>
               <p className="mb-8 text-lg text-center text-[#6D6C6A]">
-                Only 57% of employees who report moderate depression and 40% of
-                those who report severe depression receive treatment to control
-                depression symptoms.
+                The prevalence of bullying is very high in India, which is
+                approximately 50-60%. The impacts of bullying on the mental
+                health of students are well known.
               </p>
             </div>
           </div>
@@ -44,4 +46,4 @@ const About2 = () => {
   );
 };
 
-export default About2;
+export default About3;

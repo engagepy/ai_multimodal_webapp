@@ -11,6 +11,7 @@ export default authMiddleware({
     "/contact",
     "/enterprises",
     "/institutes",
+    "/pricing",
   ],
 });
 

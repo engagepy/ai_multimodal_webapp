@@ -31,8 +31,8 @@ const Pricing = () => {
         <div className="flex flex-wrap justify-center">
           <div className=" flex flex-wrap">
             <PricingCard
-              type="Personal"
-              price="$59"
+              type="Monthly"
+              price="₹500k"
               subscription="year"
               description="Perfect for using in a personal website or a client project."
               buttonText="Choose Personal"
@@ -53,27 +53,8 @@ const Pricing = () => {
               buttonText="Choose Business"
               active
             >
-              <List>5 User</List>
-              <List>All UI components</List>
-              <List>Lifetime access</List>
-              <List>Free updates</List>
-              <List>Use on31 (Three) project</List>
-              <List>4 Months support</List>
-            </PricingCard>
-            <PricingCard
-              type="Professional"
-              price="$256"
-              subscription="year"
-              description="Perfect for using in a personal website or a client project."
-              buttonText="Choose Professional"
-              active
-            >
-              <List>Unlimited User</List>
-              <List>All UI components</List>
-              <List>Lifetime access</List>
-              <List>Free updates</List>
-              <List>Unlimited project</List>
-              <List>12 Months support</List>
+              <List>Min. Students: 3000</List>
+              <List>Duration of each session: 60 mins</List>
             </PricingCard>
           </div>
         </div>

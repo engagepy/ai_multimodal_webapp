@@ -62,7 +62,13 @@ export default function EnterpriseLandingPage() {
               Enterprises
             </a>
             <a href="/institutes" className="text-black hover:underline">
-              Educational Institutes
+              Institutes
+            </a>
+            <a href="/pricing" className="text-black hover:underline">
+              Pricing
+            </a>
+            <a href="/contact" className="text-black hover:underline">
+              Contact
             </a>
           </div>
         </div>
@@ -102,9 +108,6 @@ export default function EnterpriseLandingPage() {
             />
           </div>
           <div className="flex flex-col justify-start items-start px-4 space-y-4">
-            <a href="/" className="text-white hover:underline">
-              Home
-            </a>
             <a href="/about" className="text-white hover:underline">
               About
             </a>
@@ -113,6 +116,12 @@ export default function EnterpriseLandingPage() {
             </a>
             <a href="/institutes" className="text-white hover:underline">
               Institutes
+            </a>
+            <a href="/pricing" className="text-white hover:underline">
+              Pricing
+            </a>
+            <a href="/contact" className="text-white hover:underline">
+              Contact
             </a>
           </div>
         </div>

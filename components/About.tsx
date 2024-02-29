@@ -612,17 +612,18 @@ const About1 = () => {
                   Why Choose Us
                 </span>
                 <h2 className="mb-5 text-3xl font-bold text-[#2A8D5C] sm:text-[40px]/[48px]">
-                  Make your customers happy by giving services.
+                  Feel better, not alone.
                 </h2>
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+                  There are about 45% of the population in India who are
+                  suffering from mental health related problems such as
+                  depression or anxiety according to The Economic Times.
                 </p>
                 <p className="mb-8 text-base text-body-color dark:text-dark-6">
-                  A domain name is one of the first steps to establishing your
-                  brand. Secure a consistent brand image with a domain name that
-                  matches your business.
+                  One in four families is likely to have at least one member
+                  with a mental disorder (WHO). These families not only provide
+                  physical and emotional support, but also bear the negative
+                  impact of stigma and discrimination.
                 </p>
                 <a
                   href="javascript:void(0)"

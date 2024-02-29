@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Hero from "../../components/Hero";
 import Service from "../../components/Service";
 import About1 from "../../components/About";
+import Navbar from "../../components/Navbar";
 
 const AboutPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,95 +16,45 @@ const AboutPage = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b bg-[#f0f5f4]">
-        <Head>
-          <title>Kavach A.I. - Empowering Mental Wellness</title>
-        </Head>
-        <nav className="flex justify-between items-center p-4 w-full bg-gray-800 p-4">
-          <div className="flex justify-start">
-            <Image
-              alt="Kavach Logo"
-              height={100}
-              width={100}
-              src="/kavach.gif"
-            />
-          </div>
-
-          <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <MenuIcon className="h-6 w-6 text-white" />
-            </button>
-          </div>
-
-          <div className="hidden md:flex md:justify-center md:items-center md:w-full">
-            <div className="flex justify-around w-full max-w-2xl">
-              {" "}
-              <a href="/" className="text-white hover:underline">
-                Home
-              </a>
-              <a href="/about" className="text-white hover:underline">
-                About Us
-              </a>
-              <a href="/enterprises" className="text-white hover:underline">
-                Enterprises
-              </a>
-              <a href="/institutes" className="text-white hover:underline">
-                Educational Institutes
-              </a>
-            </div>
-          </div>
-
-          <div
-            className={`fixed top-0 right-0 transform ${
-              isMenuOpen ? "translate-x-0" : "translate-x-full "
-            } md:hidden  w-64 bg-gray-800 text-white h-full z-10 transition-transform duration-300 ease-in-out`}
-          >
-            <div className="p-4 flex justify-end">
-              <button onClick={() => setIsMenuOpen(false)}>
-                <svg
-                  className="h-6 w-6 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div className="px-4 pb-6">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={100}
-                height={100}
-                layout="fixed"
-              />
-            </div>
-            <div className="flex flex-col justify-start items-start px-4 space-y-4">
-              <a href="/" className="text-white hover:underline">
-                Home
-              </a>
-              <a href="/about" className="text-white hover:underline">
-                About
-              </a>
-              <a href="/enterprises" className="text-white hover:underline">
-                Enterprises
-              </a>
-              <a href="/institutes" className="text-white hover:underline">
-                Institutes
-              </a>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
         <About1 />
         <Service />
+        <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[70px]">
+          <div className="container mx-auto">
+            <div
+              className="flex flex-wrap items-center justify-between 
+
+            "
+            >
+              <div
+                className="w-full px-4 
+              "
+              >
+                <div className=" lg:mt-0">
+                  <span className="block mb-4 text-lg font-semibold text-primary">
+                    About Us
+                  </span>
+                  <h2 className="mb-5 text-3xl font-bold text-[#2A8D5C] sm:text-[40px]/[48px]">
+                    Empowering Mental Wellness
+                  </h2>
+                  <p className="mb-5 text-base text-body-color dark:text-dark-6">
+                    Employing AIaaS, Kavach.me is about evaluating, nourishing
+                    and nursing one’s mental health at various levels like
+                    school, coachings or tuitions, hostels or boarding schools,
+                    institutes and organisations.
+                  </p>
+                  <p className="mb-8 text-base text-body-color dark:text-dark-6">
+                    Kavach A.I. offers a confidential, intuitive platform
+                    designed to understand and guide people through their
+                    challenges. Leveraging advanced AI, we provide personalised
+                    support, making mental wellness accessible anytime,
+                    anywhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
