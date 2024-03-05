@@ -50,9 +50,6 @@ export default function EnterpriseLandingPage() {
           <div className="flex justify-around w-full max-w-2xl">
             {" "}
             {/* Adjust max-width as needed */}
-            <a href="/" className="text-black hover:underline">
-              Home
-            </a>
             <a href="/about" className="text-black hover:underline">
               About Us
             </a>

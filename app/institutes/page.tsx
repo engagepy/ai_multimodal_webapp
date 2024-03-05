@@ -10,6 +10,8 @@ import Accordion from "../../components/Accordianenterprise";
 import Pricing from "../../components/Pricingenterprise";
 import React from "react";
 import Navbar from "../../components/Navbar";
+import Institute from "../../components/Imageinstitute";
+import Cta from "../../components/instituteLast";
 
 const InstitutePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -20,6 +22,7 @@ const InstitutePage = () => {
       <div className="min-h-screen bg-gradient-to-b bg-[#f0f5f4]">
         <Navbar />
         <About3 />
+        <Institute />
         <div
           id="services"
           className="flex  items-center
@@ -224,6 +227,7 @@ const InstitutePage = () => {
             </div>
           </div>
         </div>
+        <Cta />
         {/* <Pricing /> */}
         <Accordion />
       </div>

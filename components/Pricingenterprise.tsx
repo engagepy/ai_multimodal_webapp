@@ -2,7 +2,7 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <section className="relative  overflow-hidden pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]">
+    <section className="relative gi overflow-hidden pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className=" flex flex-wrap">
           <div className="w-full px-4">
