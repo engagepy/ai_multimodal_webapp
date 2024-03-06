@@ -5,6 +5,7 @@ import {
   useMemo,
   RefObject,
   useState,
+  useEffect,
 } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -19,6 +20,33 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
   const isUser = role === "user";
 
   const [isLoading, setIsLoading] = useState(false);
+  const [displayedContent, setDisplayedContent] = useState<string>("");
+
+  useEffect(() => {
+    if (content.role === "assistant") {
+      if (content.processing) {
+        // Reset displayed content when processing starts
+        setDisplayedContent("");
+        return;
+      }
+
+      if (content?.content && !isLoading) {
+        // Split the message into characters and display one by one
+        let index = 0;
+        const interval = setInterval(() => {
+          setDisplayedContent((prev) => prev + content.content.charAt(index));
+          index++;
+          if (index === content.content.length) {
+            clearInterval(interval);
+          }
+        }, 15);
+
+        return () => clearInterval(interval);
+      }
+    } else {
+      setDisplayedContent(content.content);
+    }
+  }, [content]);
 
   const playReceivedAudioStream = async (audioData: any) => {
     try {
@@ -80,7 +108,8 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
                 },
               }}
             >
-              {content?.content}
+              {/* {content?.content} */}
+              {displayedContent}
             </Markdown>
           )}
         </div>

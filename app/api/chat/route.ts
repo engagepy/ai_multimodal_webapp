@@ -1,9 +1,7 @@
 import OpenAI from "openai";
-import {
-  OpenAIStream,
-  StreamingTextResponse,
-  experimental_StreamData,
-} from "ai";
+import { OpenAIStream, StreamingTextResponse } from "ai";
+
+import { NextResponse } from "next/server";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -27,55 +25,22 @@ export async function POST(req: Request) {
 
     // console.log(messages);
 
-    // const assistant = await openai.beta.assistants.create({
-    //   model: "gpt-4",
-    //   instructions: systemPrompt[0].content,
-    // });
-
-    // const thread = await openai.beta.threads.create();
-
-    // const message = await openai.beta.threads.messages.create(thread.id, {
-    //   role: messages[0].role,
-    //   content: messages[0].content,
-    // });
-
-    // console.log(message);
-
-    // let run = await openai.beta.threads.runs.create(thread.id, {
-    //   assistant_id: assistant.id,
-    // });
-
-    // while (run.status === "in_progress" || run.status === "queued") {
-    //   await new Promise((resolve) => setTimeout(resolve, 1000));
-    //   run = await openai.beta.threads.runs.retrieve(thread.id, run.id);
-    // }
-
-    // console.log(run);
-
-    // const messages1 = await openai.beta.threads.messages.list(thread.id);
-
-    // console.log(messages1.data);
-
-    // return new Response(
-    //   JSON.stringify(messages1.data[0].content[0].text.value),
-    //   {
-    //     headers: { "content-type": "application/json" },
-    //   }
-    // );
-
-    // const stream = OpenAIStream(response);
-    // return new StreamingTextResponse(stream);
-
-    const assistant = await openai.beta.assistants.create({
-      model: "gpt-4",
-      instructions: systemPrompt[0].content,
-    });
+    const assistant = await openai.beta.assistants.update(
+      process.env.OPENAI_ASSISTANT_ID,
+      {
+        instructions: systemPrompt[0].content,
+      }
+    );
 
     const thread = await openai.beta.threads.create();
 
+    console.log(messages[messages.length - 1].role);
+
+    // console.log(messages.pop() + " messages");
+
     const message = await openai.beta.threads.messages.create(thread.id, {
-      role: messages[0].role,
-      content: messages[0].content,
+      role: messages[messages.length - 1].role,
+      content: messages[messages.length - 1].content,
     });
 
     console.log(message);
@@ -89,8 +54,6 @@ export async function POST(req: Request) {
       run = await openai.beta.threads.runs.retrieve(thread.id, run.id);
     }
 
-    console.log(run);
-
     const messages1 = await openai.beta.threads.messages.list(thread.id);
 
     console.log(messages1.data);
@@ -100,11 +63,7 @@ export async function POST(req: Request) {
       responseContent = messages1.data[0].content[0]?.text.value;
     }
 
-    console.log(responseContent);
-
-    return new Response(JSON.stringify(responseContent), {
-      headers: { "content-type": "application/json" },
-    });
+    return new NextResponse(responseContent);
   } catch (e) {
     throw e;
   }

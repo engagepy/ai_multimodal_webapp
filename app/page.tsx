@@ -208,6 +208,7 @@ export default function Home() {
             <div className="absolute w-full overflow-x-hidden">
               {messages.map((message, index) => (
                 <div key={index}>
+                  {/* {console.log(message)} */}
                   <Bubble
                     ref={messagesEndRef}
                     key={`message-${index}`}
