@@ -9,7 +9,7 @@ const openai = new OpenAI({
 
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages, threadId } = await req.json();
     const systemPrompt = [
       {
         role: "system",
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     //   messages: [...systemPrompt, ...messages],
     // });
 
-    // console.log(messages);
+    console.log("thread " + threadId);
 
     const assistant = await openai.beta.assistants.update(
       process.env.OPENAI_ASSISTANT_ID,
@@ -32,7 +32,15 @@ export async function POST(req: Request) {
       }
     );
 
-    const thread = await openai.beta.threads.create();
+    let thread;
+    let newThread = false;
+
+    if (threadId) {
+      thread = await openai.beta.threads.retrieve(threadId);
+    } else {
+      thread = await openai.beta.threads.create();
+      newThread = true;
+    }
 
     console.log(messages[messages.length - 1].role);
 
@@ -63,7 +71,17 @@ export async function POST(req: Request) {
       responseContent = messages1.data[0].content[0]?.text.value;
     }
 
-    return new NextResponse(responseContent);
+    console.log(responseContent);
+
+    return new NextResponse(
+      JSON.stringify({
+        content: responseContent,
+        data: {
+          threadId: thread.id,
+          newThread: newThread,
+        },
+      })
+    );
   } catch (e) {
     throw e;
   }

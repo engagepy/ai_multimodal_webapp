@@ -10,6 +10,7 @@ import ThemeButton from "../components/ThemeButton";
 import useConfiguration from "./hooks/useConfiguration";
 import { UserButton } from "@clerk/nextjs";
 import { Mic, SendHorizontal } from "lucide-react";
+import { ClipLoader } from "react-spinners";
 import { start } from "repl";
 import { on } from "events";
 
@@ -17,12 +18,17 @@ let recorder = null;
 
 export default function Home() {
   const [streamActive, setStreamActive] = useState(true);
+  const [threadId, setThreadId] = useState(null);
+  const [Loading, setLoading] = useState(false);
 
   const onFinish = () => {
     setStreamActive(false);
   };
   const { append, messages, input, handleInputChange, handleSubmit } = useChat({
     onFinish,
+    body: {
+      threadId: threadId,
+    },
   });
   const { useRag, llm, similarityMetric, setConfiguration } =
     useConfiguration();
@@ -37,9 +43,25 @@ export default function Home() {
 
   useEffect(() => {
     scrollToBottom();
+
+    if (
+      messages[messages.length - 1]?.role === "assistant" &&
+      messages[messages.length - 1]?.content
+    ) {
+      const msg = JSON.parse(messages[messages.length - 1].content);
+      messages[messages.length - 1].content = msg.content;
+      console.log(msg);
+      // setThreadId(messages[messages.length - 1].content.threadId);
+      setThreadId(msg.data.threadId);
+      setLoading(false);
+      // console.log(threadId + " threadId");
+      // console.log(messages[messages.length - 1].content);
+      console.log(messages[messages.length - 1]);
+    }
   }, [messages]);
 
   const handleSend = (e) => {
+    setLoading(true);
     handleSubmit(e, { options: { body: { useRag, llm, similarityMetric } } });
     setStreamActive(true);
   };
@@ -50,6 +72,7 @@ export default function Home() {
       content: promptText,
       role: "user",
     };
+    setLoading(true);
     append(msg, { options: { body: { useRag, llm, similarityMetric } } });
   };
 
@@ -206,17 +229,19 @@ export default function Home() {
           </div>
           <div className="flex-1 relative overflow-y-auto my-4 md:my-6">
             <div className="absolute w-full overflow-x-hidden">
-              {messages.map((message, index) => (
-                <div key={index}>
-                  {/* {console.log(message)} */}
-                  <Bubble
-                    ref={messagesEndRef}
-                    key={`message-${index}`}
-                    content={message}
-                    isActive={streamActive}
-                  />
-                </div>
-              ))}
+              {messages.map((message, index) => {
+                return (
+                  <div key={index}>
+                    {/* {console.log(message)} */}
+                    <Bubble
+                      ref={messagesEndRef}
+                      key={`message-${index}`}
+                      content={message}
+                      isActive={streamActive}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
           {!messages ||
@@ -232,18 +257,23 @@ export default function Home() {
             />
 
             {/* Send Button */}
+
             <button
               type="submit"
               className="chatbot-send-button flex rounded-md items-center justify-center px-2.5"
             >
-              <svg width="20" height="20" viewBox="0 0 20 20">
-                <path
-                  fill="yellow"
-                  stroke="black"
-                  strokeWidth="0.5"
-                  d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
-                />
-              </svg>
+              {Loading ? (
+                <ClipLoader size={20} className=" text-white bg-white" />
+              ) : (
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <path
+                    fill="yellow"
+                    stroke="black"
+                    strokeWidth="0.5"
+                    d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
+                  />
+                </svg>
+              )}
 
               {/* <SendHorizontal className="chatbot-text-secondary-inverse" /> */}
             </button>
