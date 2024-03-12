@@ -31,30 +31,32 @@ const Pricing = () => {
         <div className="flex flex-wrap justify-center">
           <div className=" flex flex-wrap">
             <PricingCard
-              type="Monthly"
-              price="₹500k"
-              subscription="year"
-              description="Perfect for using in a personal website or a client project."
-              buttonText="Choose Personal"
+              type="Enterprise"
+              price="₹500"
+              subscription="monthly per user"
+              description="For enterprises/corporates aiming to enhance employee mental health"
+              buttonText="Choose Enterprise"
               active // Add the 'active' property with a value
             >
-              <List>1 User</List>
-              <List>All UI components</List>
-              <List>Lifetime access</List>
-              <List>Free updates</List>
-              <List>Use on 1 (one) project</List>
-              <List>3 Months support</List>
+              <List>Min. Employees: 30,000</List>
+              <List>Duration per session: 60 mins</List>
+              <List>Custom UI components</List>
+              <List>Native RAG</List>
+              <List>Training & Support</List>
             </PricingCard>
             <PricingCard
               type="Business"
-              price="$199"
-              subscription="year"
-              description="Perfect for using in a personal website or a client project."
+              price="₹250"
+              subscription="monthly per user"
+              description="Perfect for educational institutes, school, coaching centers"
               buttonText="Choose Business"
               active
             >
               <List>Min. Students: 3000</List>
-              <List>Duration of each session: 60 mins</List>
+              <List>Duration per session: 60 mins</List>
+              <List>Custom UI components</List>
+              <List>Native RAG</List>
+              <List>Training & Support</List>
             </PricingCard>
           </div>
         </div>
