@@ -12,7 +12,6 @@ import remarkGfm from "remark-gfm";
 import { Volume2 } from "lucide-react";
 import { ClipLoader } from "react-spinners";
 
-
 const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
   { content, isActive },
   ref
@@ -25,16 +24,29 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
 
   useEffect(() => {
     if (content.role === "assistant") {
+      if (content.processing) {
+        // Reset displayed content when processing starts
+        setDisplayedContent("");
+        return;
+      }
+
       if (content?.content && !isLoading) {
-        // Directly set the displayed content to the entire message
-        setDisplayedContent(content.content);
+        // Split the message into characters and display one by one
+        let index = 0;
+        const interval = setInterval(() => {
+          setDisplayedContent((prev) => prev + content.content.charAt(index));
+          index++;
+          if (index === content.content.length) {
+            clearInterval(interval);
+          }
+        }, 15);
+
+        return () => clearInterval(interval);
       }
     } else {
-      // For user role, directly set the displayed content without changes
       setDisplayedContent(content.content);
     }
-  }, [content, isLoading]);
-  
+  }, [content]);
 
   const playReceivedAudioStream = async (audioData: any) => {
     try {
