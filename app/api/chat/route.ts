@@ -7,6 +7,8 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+export const runtime = 'edge';
+
 export async function POST(req: Request) {
   try {
     const { messages, threadId } = await req.json();
@@ -17,11 +19,6 @@ export async function POST(req: Request) {
       },
     ];
 
-    // const response = await openai.chat.completions.create({
-    //   model: "gpt-4",
-    //   stream: true,
-    //   messages: [...systemPrompt, ...messages],
-    // });
 
     console.log("thread " + threadId);
 

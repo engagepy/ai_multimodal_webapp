@@ -7,23 +7,9 @@ const Pricing = () => {
         <div className=" flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Pricing Table
-              </span>
               <h2 className="mb-3 text-3xl font-bold leading-[1.208] text-[#2A8D5C] sm:text-4xl md:text-[40px]">
                 Our Pricing Plan
               </h2>
-              <p
-                className="text-base
-                mb-8
-                text-lg
-                text-center
-                text-[#6D6C6A] 
-              "
-              >
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
             </div>
           </div>
         </div>
