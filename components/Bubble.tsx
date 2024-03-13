@@ -121,14 +121,12 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
             <Markdown
               remarkPlugins={[remarkGfm]}
               components={{
-                code({ node, children, ...props }) {
-                  return <code {...props}>{children}</code>;
-                },
+                a: ({node, ...props}) => <a style={{ color: 'blue', textDecoration: 'underline' }} {...props} />
               }}
             >
-              {/* {content?.content} */}
               {displayedContent}
             </Markdown>
+
           )}
         </div>
         {isUser
