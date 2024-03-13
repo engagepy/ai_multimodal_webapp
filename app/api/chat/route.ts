@@ -12,12 +12,6 @@ export const runtime = 'edge';
 export async function POST(req: Request) {
   try {
     const { messages, threadId } = await req.json();
-    const systemPrompt = [
-      {
-        role: "system",
-        content: `You are an expert mental health consultant. Keep your responses and langaguage aligned for an adoloscent age group. Generate confidence in users so they can share their deep rooted issues. Do not discuss any information, topic or subject outside the scope of mental health. If the conversation becomes too negative and user gives negative responses only, respond like this "This is serious. While Kavach professionals connect with you shortly, let us discuss this."`,
-      },
-    ];
 
 
     console.log("thread " + threadId);
@@ -25,7 +19,7 @@ export async function POST(req: Request) {
     const assistant = await openai.beta.assistants.update(
       process.env.OPENAI_ASSISTANT_ID,
       {
-        instructions: systemPrompt[0].content,
+        
       }
     );
 

@@ -39,14 +39,32 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
           if (index === content.content.length) {
             clearInterval(interval);
           }
-        }, 15);
+        }, 5);
 
         return () => clearInterval(interval);
       }
     } else {
       setDisplayedContent(content.content);
     }
-  }, [content]);
+  }, [content, isLoading]);
+
+  // useEffect(() => {
+  //   if (content.role === "assistant") {
+  //     if (content.processing) {
+  //       // Reset displayed content when processing starts
+  //       setDisplayedContent("");
+  //       return;
+  //     }
+  
+  //     if (content?.content && !isLoading) {
+  //       // Display the full message immediately without using setInterval
+  //       setDisplayedContent(content.content);
+  //     }
+  //   } else {
+  //     // For user roles, set the displayed content directly as well
+  //     setDisplayedContent(content.content);
+  //   }
+  // }, [content, isLoading]);
 
   const playReceivedAudioStream = async (audioData: any) => {
     try {
