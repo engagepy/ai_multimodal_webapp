@@ -46,7 +46,7 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
     } else {
       setDisplayedContent(content.content);
     }
-  }, [content, isLoading]);
+  }, [content]);
 
   // useEffect(() => {
   //   if (content.role === "assistant") {
