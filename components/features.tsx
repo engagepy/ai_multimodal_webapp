@@ -19,12 +19,15 @@ function Features() {
         </svg>
 
         <h2 className="my-8 text-2xl font-bold text-gray-700 text-[#6D6C6A] md:text-4xl">
-          Some of Our <span className="gradient">Specialities</span>
+        Your mental health journey <span className="gradient">starts here</span>
         </h2>
         <p className="text-gray-600 text-lg dark:text-white-300">
           Our expertise enhances the mental health environment through
           scientific-efficient A.I. design, aligning with a vision to address
           this rising global challenge collaboratively.
+
+          <br></br><br></br>
+          <strong>Empower your well-being. Introducing Kavach AI, your personalised mental health companion.</strong>
         </p>
       </div>
 

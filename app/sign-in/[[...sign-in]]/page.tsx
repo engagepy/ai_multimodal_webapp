@@ -150,11 +150,7 @@ export default function EnterpriseLandingPage() {
               Why Kavach A.I.?
             </h2>
             <p className="text-[#3C3B39] mt-2">
-              With rising mental health issues among young minds, Kavach A.I.
-              offers a confidential, intuitive platform designed to understand
-              and guide students through their challenges. Leveraging advanced
-              AI, we provide personalized support, making mental wellness
-              accessible anytime, anywhere.
+            We provide an AIaaS based solution with a simple interface and multiple languages which integrates native data lakes and our fine tuned model to provide an anonymous, safe and nourishing environment. <br></br> <br></br> With rising mental health issues among young minds, Kavach A.I. offers a confidential, intuitive platform designed to understand and guide students through their challenges. Leveraging advanced AI, we provide personalized support, making mental wellness accessible anytime, anywhere.             
             </p>
           </div>
           <div className="mt-6">
