@@ -617,7 +617,7 @@ const About1 = () => {
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
                   There are about 45% of the population in India who are
                   suffering from mental health related problems such as
-                  depression or anxiety according to The Economic Times.
+                  depression or anxiety according to <strong>The Economic Times.</strong>
                 </p>
                 <p className="mb-8 text-base text-body-color dark:text-dark-6">
                   One in four families is likely to have at least one member

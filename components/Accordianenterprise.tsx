@@ -24,30 +24,30 @@ const Accordion = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="What is Kavach and how can it benefit our enterprise in supporting employees' mental health?"
+              text="Kavach is a mental health monitoring and consulting tool, which uses AI to identify, understand, guide and solve mental health issues of a regular employee. Kavach provides personalised, 24/7 Accessible, and Anonymous support to each employee, to ensure all of them are mentally at their 100%, leading to high proficiency."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Is Kavach designed to accommodate the diverse mental health needs of our workforce across different age groups and roles within the company?"
+              text="Yes, Kavach is tailored to address varied mental health needs, catering to employees of different ages and roles effectively."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="How does Kavach ensure compliance with enterprise-level privacy and confidentiality standards to safeguard employees' personal health information?"
+              text="Kavach adheres to stringent enterprise-level privacy and confidentiality standards, employing robust encryption protocols, access controls, and data anonymization techniques to safeguard employees' personal health information effectively."
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Can Kavach provide insights or analytics that help our enterprise understand overall trends in employees' mental health and well-being?"
+              text="Yes, Kavach offers insights and analytics, providing valuable data on employees' mental health trends and well-being, aiding enterprises in understanding and addressing overall mental health patterns effectively."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Does Kavach offer features that allow for seamless integration with our existing employee wellness programs or initiatives?"
+              text="Kavach features seamless integration capabilities, allowing it to harmonise with existing employee wellness programs or initiatives within the enterprise ecosystem effortlessly."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Is Kavach equipped to facilitate employees' access to professional mental health support services, such as counselling or therapy?"
+              text="Kavach provides access to professional mental health support services, including counselling and therapy, ensuring employees have the resources they need to address mental health concerns effectively."
             />
           </div>
         </div>
