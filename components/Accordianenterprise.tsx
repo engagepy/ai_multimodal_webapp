@@ -24,30 +24,30 @@ const Accordion = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="What is Kavach and how can it benefit our enterprise in supporting employees' mental health?"
-              text="Kavach is a mental health monitoring and consulting tool, which uses AI to identify, understand, guide and solve mental health issues of a regular employee. Kavach provides personalised, 24/7 Accessible, and Anonymous support to each employee, to ensure all of them are mentally at their 100%, leading to high proficiency."
+              header="How does Kavach ensure compliance with student data privacy regulations and maintain confidentiality to protect students' personal health information?"
+              text="Kavach ensures compliance with student data privacy regulations through robust encryption, access controls, and strict confidentiality measures to protect personal health information."
             />
             <AccordionItem
-              header="Is Kavach designed to accommodate the diverse mental health needs of our workforce across different age groups and roles within the company?"
-              text="Yes, Kavach is tailored to address varied mental health needs, catering to employees of different ages and roles effectively."
+              header="Can Kavach provide insights or analytics that help our school understand overall trends in students' mental health and well-being?"
+              text="Kavach can provide insights and analytics on students' mental health trends, aiding the school in understanding overall well-being patterns and addressing areas of concern effectively."
             />
             <AccordionItem
-              header="How does Kavach ensure compliance with enterprise-level privacy and confidentiality standards to safeguard employees' personal health information?"
-              text="Kavach adheres to stringent enterprise-level privacy and confidentiality standards, employing robust encryption protocols, access controls, and data anonymization techniques to safeguard employees' personal health information effectively."
+              header="Does Kavach offer features that allow for seamless integration with our existing student wellness programs or initiatives?"
+              text="Kavach offers seamless integration with existing student wellness programs or initiatives, enhancing the effectiveness and accessibility of mental health support within the school community."
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="Can Kavach provide insights or analytics that help our enterprise understand overall trends in employees' mental health and well-being?"
-              text="Yes, Kavach offers insights and analytics, providing valuable data on employees' mental health trends and well-being, aiding enterprises in understanding and addressing overall mental health patterns effectively."
+              header="Is Kavach equipped with tools or resources that facilitate students' access to professional mental health support services, such as counselling or therapy?"
+              text="Kavach provides access to professional mental health support services, such as counselling or therapy, ensuring students have the resources they need to address mental health concerns effectively."
             />
             <AccordionItem
-              header="Does Kavach offer features that allow for seamless integration with our existing employee wellness programs or initiatives?"
-              text="Kavach features seamless integration capabilities, allowing it to harmonise with existing employee wellness programs or initiatives within the enterprise ecosystem effortlessly."
+              header="Does Kavach include customizable modules or content tailored to address specific stressors or challenges commonly faced by students within our school community?"
+              text="Yes, Kavach includes customizable modules and content tailored to address specific stressors or challenges commonly faced by students, promoting targeted support for their mental health needs."
             />
             <AccordionItem
-              header="Is Kavach equipped to facilitate employees' access to professional mental health support services, such as counselling or therapy?"
-              text="Kavach provides access to professional mental health support services, including counselling and therapy, ensuring employees have the resources they need to address mental health concerns effectively."
+              header="Can Kavach facilitate peer support networks or community engagement among students to foster a culture of mutual support and understanding?"
+              text="Kavach facilitates peer support networks and community engagement among students, fostering a culture of mutual support and understanding within the school community."
             />
           </div>
         </div>

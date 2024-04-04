@@ -26,33 +26,27 @@ const Institute = () => {
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
                 <h2 className="mb-5 text-3xl font-bold text-white sm:text-[40px]/[48px]">
-                  Feel better, not alone.
+                  One day at a time, one step at a time.
                 </h2>
                 <div className="  mb-8 ">
-                  <h4 className="text-white pb-4 text-xl">Mental Health</h4>
+                  <h4 className="text-white pb-4 text-xl">User Accessibility and Engagement:</h4>
 
                   <p className="mb-5 text-white">
-                    There are about 45% of the population in India who are
-                    suffering from mental health related problems such as
-                    depression or anxiety according to The Economic Times.
+                  We ensured Kavach is user-friendly with intuitive navigation and clear instructions, catering to students of all technological proficiency levels.
                   </p>
                 </div>
                 <div className="  mb-8 ">
-                  <h4 className="text-white pb-4 text-xl">Mental Health</h4>
+                  <h4 className="text-white pb-4 text-xl">Data Privacy and Confidentiality:</h4>
 
                   <p className="mb-5 text-white">
-                    There are about 45% of the population in India who are
-                    suffering from mental health related problems such as
-                    depression or anxiety according to The Economic Times.
+                  Kavach complies with relevant data privacy regulations such as GDPR or HIPAA to ensure confidentiality and protect sensitive data from unauthorised access or disclosure.
                   </p>
                 </div>
                 <div className="  mb-8 ">
-                  <h4 className="text-white pb-4 text-xl">Mental Health</h4>
+                  <h4 className="text-white pb-4 text-xl">Support for Diverse Needs:</h4>
 
                   <p className="mb-5 text-white">
-                    There are about 45% of the population in India who are
-                    suffering from mental health related problems such as
-                    depression or anxiety according to The Economic Times.
+                  Kavach offers a wide range of resources, tools, and support services tailored to address various mental health concerns commonly experienced by students, including stress, anxiety, depression, and academic pressures.
                   </p>
                 </div>
               </div>
