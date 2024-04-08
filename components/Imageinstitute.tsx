@@ -32,7 +32,7 @@ const Institute = () => {
                   <h4 className="text-white pb-4 text-xl">User Accessibility and Engagement:</h4>
 
                   <p className="mb-5 text-white">
-                  We ensured Kavach is user-friendly with intuitive navigation and clear instructions, catering to students of all technological proficiency levels.
+                  We ensure Kavach is user-friendly with intuitive navigation and clear instructions, catering to students of all technological proficiency levels.
                   </p>
                 </div>
                 <div className="  mb-8 ">
