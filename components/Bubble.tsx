@@ -1,70 +1,20 @@
 import Link from "next/link";
-import {
-  forwardRef,
-  JSXElementConstructor,
-  useMemo,
-  RefObject,
-  useState,
-  useEffect,
-} from "react";
+import { forwardRef, useState, useEffect } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Volume2 } from "lucide-react";
 import { ClipLoader } from "react-spinners";
 
-const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
-  { content, isActive },
-  ref
-) {
-  const { role } = content;
-  const isUser = role === "user";
-
+const Bubble = forwardRef(function Bubble({ content, isActive }, ref) {
+  const isUser = content.role === "user";
   const [isLoading, setIsLoading] = useState(false);
   const [displayedContent, setDisplayedContent] = useState<string>("");
 
   useEffect(() => {
-    if (content.role === "assistant") {
-      if (content.processing) {
-        // Reset displayed content when processing starts
-        setDisplayedContent("");
-        return;
-      }
-
-      if (content?.content && !isLoading) {
-        // Split the message into characters and display one by one
-        let index = 0;
-        const interval = setInterval(() => {
-          setDisplayedContent((prev) => prev + content.content.charAt(index));
-          index++;
-          if (index === content.content.length) {
-            clearInterval(interval);
-          }
-        }, 5);
-
-        return () => clearInterval(interval);
-      }
-    } else {
-      setDisplayedContent(content.content);
-    }
-  }, [content]);
-
-  // useEffect(() => {
-  //   if (content.role === "assistant") {
-  //     if (content.processing) {
-  //       // Reset displayed content when processing starts
-  //       setDisplayedContent("");
-  //       return;
-  //     }
-  
-  //     if (content?.content && !isLoading) {
-  //       // Display the full message immediately without using setInterval
-  //       setDisplayedContent(content.content);
-  //     }
-  //   } else {
-  //     // For user roles, set the displayed content directly as well
-  //     setDisplayedContent(content.content);
-  //   }
-  // }, [content, isLoading]);
+    // Immediately set the displayed content to the full message
+    // This removes the character-by-character display logic
+    setDisplayedContent(content.content || "");
+  }, [content.content]);
 
   const playReceivedAudioStream = async (audioData: any) => {
     try {
@@ -106,10 +56,8 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
 
   return (
     <div
-      ref={ref as RefObject<HTMLDivElement>}
-      className={`block mt-4 md:mt-6 pb-[7px] clear-both ${
-        isUser ? "float-right" : "float-left"
-      }`}
+      ref={ref}
+      className={`block mt-4 md:mt-6 pb-[7px] clear-both ${isUser ? "float-right" : "float-left"}`}
     >
       <div className="flex justify-end">
         <div className={`talk-bubble${isUser ? " user" : ""} p-2 md:p-4`}>
@@ -121,43 +69,38 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
             <Markdown
               remarkPlugins={[remarkGfm]}
               components={{
-                a: ({node, ...props}) => <a style={{ color: 'blue', textDecoration: 'underline' }} {...props} />
+                a: ({ node, ...props }) => <a style={{ color: 'blue', textDecoration: 'underline' }} {...props} />
               }}
             >
               {displayedContent}
             </Markdown>
-
           )}
         </div>
-        {isUser
-          ? null
-          : isActive == false && (
-              <button
-                onClick={handleAudio}
-                className="chatbot-record-button flex rounded-md items-center justify-center px-2.5
-              
-                "
-              >
-                {isLoading ? (
-                  <ClipLoader
-                    size={20}
-                    className="chatbot-text-secondary-inverse"
-                  />
-                ) : (
-                  <Volume2
-                    size={20}
-                    className="chatbot-text-secondary-inverse"
-                  />
-                )}
-              </button>
+        {!isUser && isActive == false && (
+          <button
+            onClick={handleAudio}
+            className="chatbot-record-button flex rounded-md items-center justify-center px-2.5"
+          >
+            {isLoading ? (
+              <ClipLoader
+                size={20}
+                className="chatbot-text-secondary-inverse"
+              />
+            ) : (
+              <Volume2
+                size={20}
+                className="chatbot-text-secondary-inverse"
+              />
             )}
+          </button>
+        )}
       </div>
-      {content.url ? (
+      {content.url && (
         <div className="flex justify-end mt-3">
-          <div className="flex items-center gap-2">
-            <span className="text-sm">Source:</span>
-            <Link href={content?.url} target="_blank">
-              <div className="chatbot-faq-link flex items-center px-2 py-0.5">
+          <Link href={content.url} passHref>
+            <a target="_blank" className="chatbot-faq-link flex items-center gap-2 px-2 py-0.5 text-sm">
+              <span>Source:</span>
+              <div className="flex items-center">
                 <svg
                   width="14"
                   height="7"
@@ -171,10 +114,10 @@ const Bubble: JSXElementConstructor<any> = forwardRef(function Bubble(
                   Mental Health FAQs
                 </span>
               </div>
-            </Link>
-          </div>
+            </a>
+          </Link>
         </div>
-      ) : null}
+      )}
     </div>
   );
 });
