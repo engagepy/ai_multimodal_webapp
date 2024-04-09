@@ -236,7 +236,7 @@ export default function Home() {
                     <Bubble
                       ref={messagesEndRef}
                       key={`message-${index}`}
-                      content={message}
+                      content={message} // Add the missing 'content' prop
                       isActive={streamActive}
                     />
                   </div>
