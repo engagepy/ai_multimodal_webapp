@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 
     console.log(message);
 
-    let run = await openai.beta.threads.runs.create(thread.id, {
+    let run = await openai.beta.threads.runs.createAndPoll(thread.id, {
       assistant_id: assistant.id,
     });
 

@@ -18,7 +18,7 @@
     "lucide-react": "^0.321.0",
     "multer": "^1.4.5-lts.1",
     "next": "14.0.1",
-    "openai": "^4.14.2",
+    "openai": "^4.33.0",
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.0",
