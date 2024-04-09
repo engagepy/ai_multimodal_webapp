@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { forwardRef, useState, useEffect } from "react";
+import { forwardRef, useState, useEffect, LegacyRef } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Volume2 } from "lucide-react";
 import { ClipLoader } from "react-spinners";
 
-const Bubble = forwardRef(function Bubble({ content, isActive }, ref) {
+const Bubble = forwardRef(function Bubble({ content, isActive }: { content: any, isActive: boolean }, ref) {
   const isUser = content.role === "user";
   const [isLoading, setIsLoading] = useState(false);
   const [displayedContent, setDisplayedContent] = useState<string>("");
@@ -56,7 +56,7 @@ const Bubble = forwardRef(function Bubble({ content, isActive }, ref) {
 
   return (
     <div
-      ref={ref}
+      ref={ref as LegacyRef<HTMLDivElement>}
       className={`block mt-4 md:mt-6 pb-[7px] clear-both ${isUser ? "float-right" : "float-left"}`}
     >
       <div className="flex justify-end">
