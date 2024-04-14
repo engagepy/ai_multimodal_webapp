@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
+export const maxDuration = 60;
 export const runtime = 'nodejs';
 
 async function delay(ms) {
