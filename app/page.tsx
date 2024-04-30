@@ -171,7 +171,7 @@ export default function Home() {
                 <Image
                   src="/green_logo.png"
                   className="w-18 h-8 md:w-25 md:h-10"
-                  width="100"
+                  width="50"
                   height="100"
                   alt="Logo"
                 />
