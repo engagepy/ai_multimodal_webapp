@@ -27,7 +27,7 @@ function Features() {
           this rising global challenge collaboratively.
 
           <br></br><br></br>
-          <strong>Empower your well-being. Introducing Kavach AI, your personalised mental health companion.</strong>
+          <strong>Empower your well-being. Introducing our AI, your personalised mental health companion.</strong>
         </p>
       </div>
 

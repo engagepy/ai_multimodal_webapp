@@ -2,10 +2,10 @@ import PromptSuggestionButton from "./PromptSuggestionButton";
 
 const PromptSuggestionRow = ({ onPromptClick }) => {
   const prompts = [
-    "Feeling stressed about exams",
-    "Struggling with friendship issues",
+    "Feeling stressed with school",
+    "Struggling with issues",
     "Dealing with family pressure",
-    "Feeling overwhelmed at school",
+    "Feeling overwhelmed at work",
   ];
 
   return (

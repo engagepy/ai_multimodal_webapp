@@ -24,30 +24,30 @@ const Accordion = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How does Kavach ensure compliance with student data privacy regulations and maintain confidentiality to protect students' personal health information?"
-              text="Kavach ensures compliance with student data privacy regulations through robust encryption, access controls, and strict confidentiality measures to protect personal health information."
+              header="How does ATZ A.I. ensure compliance with student data privacy regulations and maintain confidentiality to protect students' personal health information?"
+              text="ATZ A.I. ensures compliance with student data privacy regulations through robust encryption, access controls, and strict confidentiality measures to protect personal health information."
             />
             <AccordionItem
-              header="Can Kavach provide insights or analytics that help our school understand overall trends in students' mental health and well-being?"
-              text="Kavach can provide insights and analytics on students' mental health trends, aiding the school in understanding overall well-being patterns and addressing areas of concern effectively."
+              header="Can ATZ A.I. provide insights or analytics that help our school understand overall trends in students' mental health and well-being?"
+              text="ATZ A.I. can provide insights and analytics on students' mental health trends, aiding the school in understanding overall well-being patterns and addressing areas of concern effectively."
             />
             <AccordionItem
-              header="Does Kavach offer features that allow for seamless integration with our existing student wellness programs or initiatives?"
-              text="Kavach offers seamless integration with existing student wellness programs or initiatives, enhancing the effectiveness and accessibility of mental health support within the school community."
+              header="Does ATZ A.I. offer features that allow for seamless integration with our existing student wellness programs or initiatives?"
+              text="ATZ A.I. offers seamless integration with existing student wellness programs or initiatives, enhancing the effectiveness and accessibility of mental health support within the school community."
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="Is Kavach equipped with tools or resources that facilitate students' access to professional mental health support services, such as counselling or therapy?"
-              text="Kavach provides access to professional mental health support services, such as counselling or therapy, ensuring students have the resources they need to address mental health concerns effectively."
+              header="Is ATZ A.I. equipped with tools or resources that facilitate students' access to professional mental health support services, such as counselling or therapy?"
+              text="ATZ A.I. provides access to professional mental health support services, such as counselling or therapy, ensuring students have the resources they need to address mental health concerns effectively."
             />
             <AccordionItem
-              header="Does Kavach include customizable modules or content tailored to address specific stressors or challenges commonly faced by students within our school community?"
-              text="Yes, Kavach includes customizable modules and content tailored to address specific stressors or challenges commonly faced by students, promoting targeted support for their mental health needs."
+              header="Does ATZ A.I. include customizable modules or content tailored to address specific stressors or challenges commonly faced by students within our school community?"
+              text="Yes, ATZ A.I. includes customizable modules and content tailored to address specific stressors or challenges commonly faced by students, promoting targeted support for their mental health needs."
             />
             <AccordionItem
-              header="Can Kavach facilitate peer support networks or community engagement among students to foster a culture of mutual support and understanding?"
-              text="Kavach facilitates peer support networks and community engagement among students, fostering a culture of mutual support and understanding within the school community."
+              header="Can ATZ A.I. facilitate peer support networks or community engagement among students to foster a culture of mutual support and understanding?"
+              text="ATZ A.I. facilitates peer support networks and community engagement among students, fostering a culture of mutual support and understanding within the school community."
             />
           </div>
         </div>

@@ -28,12 +28,12 @@ export default function EnterpriseLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#A3EE98] via-[#FFBBF4] to-[#E9FC88]">
       <Head>
-        <title>Kavach A.I. - Empowering Mental Wellness</title>
+        <title>ATZ A.I. - Empowering Next Generation</title>
       </Head>
       <nav className="flex justify-between items-center p-4 w-full">
         <div className="flex justify-start">
           <Image
-            alt="Kavach Logo"
+            alt="ATZ Logo"
             height={100}
             width={100}
             src="/green_logo.png"
@@ -147,10 +147,10 @@ export default function EnterpriseLandingPage() {
           </svg>
           <div className="mt-6">
             <h2 className="my-8 text-2xl font-bold text-gray-700 md:text-4xl">
-              Why Kavach A.I.?
+              Why Use A.I.?
             </h2>
             <p className="text-[#3C3B39] mt-2">
-            We provide an AIaaS based solution with a simple interface and multiple languages which integrates native data lakes and our fine tuned model to provide an anonymous, safe and nourishing environment. <br></br> <br></br> With rising mental health issues among young minds, Kavach A.I. offers a confidential, intuitive platform designed to understand and guide students through their challenges. Leveraging advanced AI, we provide personalized support, making mental wellness accessible anytime, anywhere.             
+            We provide an AIaaS based solution with a simple interface and multiple languages which integrates native data lakes and our fine tuned model to provide an anonymous, safe and nourishing environment. <br></br> <br></br> With rising mental health issues among young minds, ATZ A.I. demo offers a confidential, intuitive platform designed to understand and guide students through their challenges. Leveraging advanced AI, we provide personalized support, making mental wellness accessible anytime, anywhere.             
             </p>
           </div>
           <div className="mt-6">
@@ -159,7 +159,7 @@ export default function EnterpriseLandingPage() {
             </h2>
             <p className="text-[#3C3B39] mt-2">
               Over 20% of children and adolescents globally face mental health
-              challenges, yet less than 15% receive the help they need. Kavach
+              challenges, yet less than 15% receive the help they need. Our
               A.I. aims to fill this gap, offering a safe space for expression
               and growth.
             </p>

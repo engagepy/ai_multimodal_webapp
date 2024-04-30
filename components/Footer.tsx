@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <footer className="chatbot-text-tertiary flex justify-between text-sm mt-6">
-        <span className="px-3">© KAVACH</span>
+        <span className="px-3">© Astra Techz</span>
         
       
       <div className="ml-auto flex flex-row items-center">

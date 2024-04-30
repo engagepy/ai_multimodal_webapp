@@ -169,7 +169,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/logo.png"
+                  src="/green_logo.png"
                   className="w-18 h-8 md:w-25 md:h-10"
                   width="100"
                   height="100"
@@ -196,7 +196,7 @@ export default function Home() {
             <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">
               With{" "}
               <span className="text-[var(--text-primary-main)]">
-                Kavach mental health
+                ATZ A.I. mental health
               </span>{" "}
               is a breeze! State your questions or dilemmas. Chat is{" "}
               <span className="text-[var(--text-primary-main)]">
