@@ -34,12 +34,12 @@ export default function EnterpriseLandingPage() {
       </Head>
       <nav className="flex justify-between items-center p-4 w-full">
         <div className="flex justify-start">
-          <Image
+          <a href="https://astratechz.com"><Image
             alt="ATZ Logo"
             height={150}
             width={150}
             src="/green_logo.png"
-          />
+          /></a>
         </div>
         {/* Mobile menu button */}
         <div className="md:hidden">
