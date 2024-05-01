@@ -42,7 +42,7 @@ export default function EnterpriseLandingPage() {
           /></a>
         </div>
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <MenuIcon className="h-6 w-6 text-white" />
           </button>
@@ -72,6 +72,7 @@ export default function EnterpriseLandingPage() {
             </button>
           </div>
           {/* Logo aligned left with padding below */}
+          {/*}
           <div className="px-4 pb-6">
             <Image
               src="/green_logo.png"
@@ -81,17 +82,17 @@ export default function EnterpriseLandingPage() {
               layout="fixed"
             />
           </div>
-        </div>
+        </div> */}
       </nav>
 
-      {/* Hero Section */}
-      <div className="text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-white">
-          AI <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Empowering The Next</span>
-          <span className="animate-blink text-[#c1fe6c]">_</span>
-        </h1>
-      </div>
-      {/* Main Content */}
+      
+        <div className="text-center p-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#efb849]">
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#efb849] via-white to-white">Empowering The Next</span>
+            <span className="animate-blink text-[#c1fe6c]">_</span>
+          </h1>
+        </div>
+        {/* Main Content */}
 
       <div className="flex flex-wrap items-start justify-center lg:items-center lg:justify-between p-4">
         <div className="w-full lg:w-2/3 flex flex-col justify-between p-4">

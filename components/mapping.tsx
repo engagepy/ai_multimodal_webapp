@@ -4,7 +4,7 @@ export const Mapping = () => {
   return (
     <>
     <div className="mt-6">
-  <h3 className="my-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600 md:text-3xl text-center">
+  <h3 className="my-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br text-[#efb849] md:text-3xl text-center">
     AI <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency Mapping</span>
   </h3>
   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
