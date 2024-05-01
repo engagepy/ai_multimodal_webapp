@@ -126,7 +126,7 @@ export default function EnterpriseLandingPage() {
       {/* Hero Section */}
       <div className="text-center p-4">
         <h1 className="text-4xl md:text-6xl font-bold text-[#efb849]">
-          A.I. Empowering the Next Generation
+          AI Empowering the Next
           <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
