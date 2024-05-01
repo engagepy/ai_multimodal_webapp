@@ -18,8 +18,8 @@ function Features() {
           />
         </svg>
 
-        <h2 className="my-8 text-2xl font-bold text-gray-200 text-[#6D6C6A] md:text-4xl">
-        Transform Your <span className="gradient">Business with AI</span>
+        <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+        Transform <span className="gradient text-white">Your Business with AI</span>
         
         </h2>
         <p className="text-gray-200 text-lg dark:text-white-300">
