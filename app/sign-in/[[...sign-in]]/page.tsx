@@ -109,7 +109,7 @@ export default function EnterpriseLandingPage() {
           </svg>
           <div className="mt-6">
   <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
-    Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI?</span>
+    Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI ?</span>
   </h2>
     <p className="text-gray-300 mt-2">
   Imagine a small bookstore where AI-driven recommendations help customers discover books that feel personally curated for their tastes, or a coffee shop where AI optimizes inventory based on predictive analytics of buying patterns. Picture a manufacturing plant where AI enhances efficiency, predicting maintenance issues before they occur, or a healthcare provider where AI algorithms predict patient health risks with astonishing accuracy.
