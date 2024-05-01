@@ -34,12 +34,12 @@ export default function EnterpriseLandingPage() {
       </Head>
       <nav className="flex justify-between items-center p-4 w-full">
         <div className="flex justify-start">
-          <Image
+          <a href="https://astratechz.com"><Image
             alt="ATZ Logo"
-            height={100}
-            width={100}
+            height={150}
+            width={150}
             src="/green_logo.png"
-          />
+          /></a>
         </div>
         {/* Mobile menu button */}
         <div className="md:hidden">
@@ -81,30 +81,13 @@ export default function EnterpriseLandingPage() {
               layout="fixed"
             />
           </div>
-          <div className="flex flex-col justify-start items-start px-4 space-y-4">
-            <a href="/about" className="text-white hover:underline">
-              About
-            </a>
-            <a href="/enterprises" className="text-white hover:underline">
-              Enterprises
-            </a>
-            <a href="/institutes" className="text-white hover:underline">
-              Institutes
-            </a>
-            <a href="/pricing" className="text-white hover:underline">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:underline">
-              Contact
-            </a>
-          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
       <div className="text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-[#efb849]">
-          AI Empowering The Next
+        <h1 className="text-4xl md:text-6xl font-bold text-white">
+          AI <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Empowering The Next</span>
           <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
@@ -125,26 +108,29 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-  <h2 className="my-8 text-2xl font-bold text-gray-400 md:text-4xl">
-    Why Use A.I.?
+  <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+    Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI?</span>
   </h2>
-  <p className="text-gray-300 mt-2">
-    Embrace the future of technology with our comprehensive AIaaS solution. Here are some of the standout features that set us apart:
-  </p>
+    <p className="text-gray-300 mt-2">
+  Imagine a small bookstore where AI-driven recommendations help customers discover books that feel personally curated for their tastes, or a coffee shop where AI optimizes inventory based on predictive analytics of buying patterns. Picture a manufacturing plant where AI enhances efficiency, predicting maintenance issues before they occur, or a healthcare provider where AI algorithms predict patient health risks with astonishing accuracy.
+    </p>
   <br></br>
-  <ul className="list-none text-gray-200" >
-    <li>✅ <strong>Multi-Modality Interaction:</strong> Seamlessly integrates various forms text, voice, and visual data.</li>
-    <li>✅ <strong>Text-to-Voice & Voice-to-Text Capabilities:</strong> Spoken language into text and vice versa.</li>
-    <li>✅ <strong>Retrieval Augmented Generation:</strong> Leverage historical data to generate contextually relevant retrieval.</li>
-    <li>✅ <strong>Secure Login:</strong> Advanced security protocols to ensure user identity protection and data privacy.</li>
-    <li>✅ <strong>GDPR Compliance:</strong> Strictest data protection regulations, handling all data with utmost security.</li>
-  </ul>
+  <ul className="list-none text-gray-200">
+  <li>✅ <strong>Multi-Modality Interaction:</strong> Seamlessly integrates various forms text, voice, and visual data.</li>
+  <li>✅ <strong>Retrieval Augmented Generation:</strong> Leverages historical data to generate contextually relevant content.</li>
+  <li>✅ <strong>GDPR Compliance:</strong> Meets the strictest data protection regulations, handling all data with confidentiality.</li>
+  <li>✅ <strong>Real-Time Analytics:</strong> Provides immediate insights into user behavior and system performance.</li>
+  <li>✅ <strong>Automated Customer Support:</strong> Offers 24/7 customer service with instant, automated responses to inquiries.</li>
+  <li>✅ <strong>Integration Capabilities:</strong> Easily integrates with existing platforms and software, minimizing disruption.</li>
+  
+</ul>
+
   
 </div>
 
 <div className="mt-6">
-  <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
-    Operational Efficiency with AI
+  <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+    Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency with AI</span>
   </h2>
   <p className="text-gray-300 mt-2">
     AI technology is revolutionizing how businesses operate, offering unprecedented improvements in efficiency and productivity. By integrating AI solutions, organizations can harness the full potential of digital transformation.
@@ -166,7 +152,7 @@ export default function EnterpriseLandingPage() {
         {/* Adjusted SignIn box */}
         <div className="flex w-full lg:w-1/3 justify-center p-4">
           <div className="w-full max-w-xs mx-auto">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-[#efb849] mb-4">
               Explore Our Healthcare AI Demo
             </h2>
             <SignUp />
