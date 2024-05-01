@@ -26,7 +26,8 @@ export default function EnterpriseLandingPage() {
   }, [fullText, typingDelay]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#A3EE98] via-[#FFBBF4] to-[#E9FC88]">
+    <div className="min-h-screen bg-gradient-to-b from-[#0A2342] via-[#CB7723] to-[#FFD23F]">
+
       <Head>
         <title>ATZ A.I. - Empowering Next Generation</title>
       </Head>
@@ -50,19 +51,19 @@ export default function EnterpriseLandingPage() {
           <div className="flex justify-around w-full max-w-2xl">
             {" "}
             {/* Adjust max-width as needed */}
-            <a href="/about" className="text-black hover:underline">
+            <a href="/about" className="text-white hover:underline">
               About Us
             </a>
-            <a href="/enterprises" className="text-black hover:underline">
+            <a href="/enterprises" className="text-white hover:underline">
               Enterprises
             </a>
-            <a href="/institutes" className="text-black hover:underline">
+            <a href="/institutes" className="text-white hover:underline">
               Institutes
             </a>
-            <a href="/pricing" className="text-black hover:underline">
+            <a href="/pricing" className="text-white hover:underline">
               Pricing
             </a>
-            <a href="/contact" className="text-black hover:underline">
+            <a href="/contact" className="text-white hover:underline">
               Contact
             </a>
           </div>
@@ -124,9 +125,9 @@ export default function EnterpriseLandingPage() {
 
       {/* Hero Section */}
       <div className="text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-[#6D6C6A]">
+        <h1 className="text-4xl md:text-6xl font-bold text-[#efb849]">
           A.I. Empowering the Next Generation
-          <span className="animate-blink text-[#a66cfe]">|</span>
+          <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
       {/* Main Content */}
@@ -137,7 +138,7 @@ export default function EnterpriseLandingPage() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6 text-secondary"
+            className="w-6 h-6 text-white"
           >
             <path
               fillRule="evenodd"
@@ -146,18 +147,18 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-gray-700 md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
               Why Use A.I.?
             </h2>
-            <p className="text-[#3C3B39] mt-2">
+            <p className="text-gray-300 mt-2">
             We provide an AIaaS based solution with a simple interface and multiple languages which integrates native data lakes and our fine tuned model to provide an anonymous, safe and nourishing environment. <br></br> <br></br> With rising mental health issues among young minds, ATZ A.I. demo offers a confidential, intuitive platform designed to understand and guide students through their challenges. Leveraging advanced AI, we provide personalized support, making mental wellness accessible anytime, anywhere.             
             </p>
           </div>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-gray-700 md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
               The Need for Support
             </h2>
-            <p className="text-[#3C3B39] mt-2">
+            <p className="text-gray-300 mt-2">
               Over 20% of children and adolescents globally face mental health
               challenges, yet less than 15% receive the help they need. Our
               A.I. aims to fill this gap, offering a safe space for expression
@@ -168,14 +169,12 @@ export default function EnterpriseLandingPage() {
 
         {/* Adjusted SignIn box */}
         <div className="flex w-full lg:w-1/3 justify-center p-4">
-          <div className="w-full max-w-xs">
-            <h2 className="text-xl font-bold text-[#3C3B39] mb-4">
+          <div className="w-full max-w-xs mx-auto">
+            <h2 className="text-xl font-bold text-white mb-4">
               Sign In to Your Account
             </h2>
             <SignIn />
-            <p className="text-center text-sm text-[#3C3B39] mt-4">
-              Join us in making mental wellness accessible.
-            </p>
+            
           </div>
         </div>
       </div>

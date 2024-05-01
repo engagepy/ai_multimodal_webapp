@@ -9,7 +9,7 @@ function Features() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-6 h-6 text-secondary"
+          className="w-6 h-6 text-white"
         >
           <path
             fillRule="evenodd"
@@ -18,10 +18,10 @@ function Features() {
           />
         </svg>
 
-        <h2 className="my-8 text-2xl font-bold text-gray-700 text-[#6D6C6A] md:text-4xl">
+        <h2 className="my-8 text-2xl font-bold text-gray-200 text-[#6D6C6A] md:text-4xl">
         Your mental health journey <span className="gradient">starts here</span>
         </h2>
-        <p className="text-gray-600 text-lg dark:text-white-300">
+        <p className="text-gray-200 text-lg dark:text-white-300">
           Our expertise enhances the mental health environment through
           scientific-efficient A.I. design, aligning with a vision to address
           this rising global challenge collaboratively.
