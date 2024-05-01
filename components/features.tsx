@@ -19,15 +19,14 @@ function Features() {
         </svg>
 
         <h2 className="my-8 text-2xl font-bold text-gray-200 text-[#6D6C6A] md:text-4xl">
-        Your mental health journey <span className="gradient">starts here</span>
+        Transform Your <span className="gradient">Business with AI</span>
+        
         </h2>
         <p className="text-gray-200 text-lg dark:text-white-300">
-          Our expertise enhances the mental health environment through
-          scientific-efficient A.I. design, aligning with a vision to address
-          this rising global challenge collaboratively.
+        Discover how our cutting-edge AI technology can streamline operations, enhance decision-making, and revolutionize customer engagement.
 
           <br></br><br></br>
-          <strong>Empower your well-being. Introducing our AI, your personalised mental health companion.</strong>
+          <strong>Empower your progress in this rapidly shifting landscape. Introducing Astra Techz AI solutioning, your AI mission delivered.</strong>
         </p>
       </div>
 
@@ -45,12 +44,10 @@ function Features() {
 
               <div className="space-y-2">
                 <h5 className="text-xl font-semibold text-gray-700 dark:text-white group-hover:text-green-500">
-                  Student Centric Design
+                  Scalable Solutions
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Leading certifications, enterprise design, student consulting
-                  strategies, emergency mangement protocols, and on premise
-                  solutions.
+                Effortlessly scale operations with AI-driven automation and real-time analytics.
                 </p>
               </div>
             </div>
@@ -70,8 +67,8 @@ function Features() {
                   Expert Team
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Team of experts, including psychologists, call support, and
-                  emergency consultants.
+                  Team of experts, including AI/ML engineers, architecture experts, DevOps
+                  and experienced technology consultants.
                 </p>
               </div>
             </div>
@@ -87,11 +84,10 @@ function Features() {
               />
               <div className="space-y-2">
                 <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-green-500">
-                  Track Record
+                Customer Engagement
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
-                  A successful track record in implementing improvements in
-                  student mental health solutions.
+                Enhance customer service with AI-powered chatbots and personalized interaction.
                 </p>
               </div>
             </div>
@@ -108,12 +104,10 @@ function Features() {
 
               <div className="space-y-2">
                 <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-green-500">
-                  Education Benefits
+                Data Insights
                 </h5>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Improved access reduces stress and anxiety. Resulting in
-                  postive interpersonal skills, lower fatalities, improved
-                  health, and an increased academic value.
+                Leverage advanced analytics to turn data into actionable insights and drive strategic decisions.
                 </p>
               </div>
             </div>

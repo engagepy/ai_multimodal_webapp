@@ -1,6 +1,6 @@
 "use client";
 
-import { SignIn, SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -29,7 +29,7 @@ export default function EnterpriseLandingPage() {
     <div className="min-h-screen bg-gradient-to-b from-[#0A2342] via-[#CB7723] to-[#FFD23F]">
 
       <Head>
-        <title>ATZ A.I. - Empowering Next Generation</title>
+        <title>AI Empowering Next</title>
       </Head>
       <nav className="flex justify-between items-center p-4 w-full">
         <div className="flex justify-start">
@@ -47,10 +47,11 @@ export default function EnterpriseLandingPage() {
           </button>
         </div>
         {/* Navigation links container */}
-        <div className="hidden md:flex md:justify-center md:items-center md:w-full">
+        {/* <div className="hidden md:flex md:justify-center md:items-center md:w-full">
           <div className="flex justify-around w-full max-w-2xl">
             {" "}
             {/* Adjust max-width as needed */}
+            {/*}
             <a href="/about" className="text-white hover:underline">
               About Us
             </a>
@@ -67,7 +68,9 @@ export default function EnterpriseLandingPage() {
               Contact
             </a>
           </div>
-        </div>
+        </div>*/}
+
+
         {/* Mobile menu */}
         <div
           className={`fixed top-0 right-0 transform ${
@@ -126,7 +129,7 @@ export default function EnterpriseLandingPage() {
       {/* Hero Section */}
       <div className="text-center p-4">
         <h1 className="text-4xl md:text-6xl font-bold text-[#efb849]">
-          SignUp for AI Demo
+          AI Empowering The Next
           <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
@@ -147,40 +150,126 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
-              Why Use A.I.?
-            </h2>
-            <p className="text-gray-300 mt-2">
-            We provide an AIaaS based solution with a simple interface and multiple languages which integrates native data lakes and our fine tuned model to provide an anonymous, safe and nourishing environment. <br></br> <br></br> With rising mental health issues among young minds, ATZ A.I. demo offers a confidential, intuitive platform designed to understand and guide students through their challenges. Leveraging advanced AI, we provide personalized support, making mental wellness accessible anytime, anywhere.             
-            </p>
-          </div>
-          <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
-              The Need for Support
-            </h2>
-            <p className="text-gray-300 mt-2">
-              Over 20% of children and adolescents globally face mental health
-              challenges, yet less than 15% receive the help they need. Our
-              A.I. aims to fill this gap, offering a safe space for expression
-              and growth.
-            </p>
-          </div>
+  <h2 className="my-8 text-2xl font-bold text-gray-400 md:text-4xl">
+    Why Use A.I.?
+  </h2>
+  <p className="text-gray-300 mt-2">
+    Embrace the future of technology with our comprehensive AIaaS solution. Here are some of the standout features that set us apart:
+  </p>
+  <br></br>
+  <ul className="list-none text-gray-200" >
+    <li>✅ <strong>Multi-Modality Interaction:</strong> Seamlessly integrates various forms text, voice, and visual data.</li>
+    <li>✅ <strong>Text-to-Voice & Voice-to-Text Capabilities:</strong> Spoken language into text and vice versa.</li>
+    <li>✅ <strong>Retrieval Augmented Generation:</strong> Leverage historical data to generate contextually relevant retrieval.</li>
+    <li>✅ <strong>Secure Login:</strong> Advanced security protocols to ensure user identity protection and data privacy.</li>
+    <li>✅ <strong>GDPR Compliance:</strong> Strictest data protection regulations, handling all data with utmost security.</li>
+  </ul>
+  
+</div>
+
+<div className="mt-6">
+  <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
+    Operational Efficiency with AI ?
+  </h2>
+  <p className="text-gray-300 mt-2">
+    AI technology is revolutionizing how businesses operate, offering unprecedented improvements in efficiency and productivity. By integrating AI solutions, organizations can harness the full potential of digital transformation.
+  </p>
+  <ul className="mt-4 list-none text-white">
+    <li>🕹️ <strong>Automated Decision-Making:</strong> AI algorithms analyze data and make informed decisions rapidly, far surpassing human speed and accuracy.</li>
+    <li>📟 <strong>Process Automation:</strong> From routine tasks to complex operations, AI streamlines workflows, freeing up human resources for strategic activities.</li>
+    <li>🛂 <strong>Enhanced Customer Interactions:</strong> AI-driven tools personalize customer experiences, responding in real-time to customer inquiries and needs.</li>
+    <li>🌍 <strong>Scalable Innovations:</strong> AI adapts and scales according to organizational needs, ensuring sustainable growth and agility in rapidly changing markets.</li>
+    <li>💰 <strong>Cost Reduction:</strong> By automating tasks and optimizing systems, AI significantly reduces operational costs, delivering a better return on investment.</li>
+  </ul>
+  <p className="text-gray-100 mt-4">
+    As industries evolve, the integration of AI is becoming not just advantageous but essential. Organizations adopting AI are setting new standards in efficiency, paving the way for future innovations and market leadership.
+  </p>
+</div>
+
         </div>
 
         {/* Adjusted SignIn box */}
         <div className="flex w-full lg:w-1/3 justify-center p-4">
           <div className="w-full max-w-xs mx-auto">
             <h2 className="text-xl font-bold text-white mb-4">
-              New Account SignUp Below
+              Explore Our Healthcare AI Demo
             </h2>
             <SignUp />
-           
+            
           </div>
         </div>
       </div>
 
       {/* Features Section */}
       <Features />
+      <div className="mt-6">
+  <h3 className="my-4 text-xl font-bold text-gray-100 md:text-3xl text-center">
+    AI Efficiency in Organizational Settings
+  </h3>
+  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead className="text-xs uppercase text-white bg-[#0A2342]">
+      <tr>
+        <th scope="col" className="py-3 px-6">
+          Feature
+        </th>
+        <th scope="col" className="py-3 px-6">
+          Benefit
+        </th>
+        <th scope="col" className="py-3 px-6">
+          Impact
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr className="bg-[#CB7723] border-b border-gray-700">
+  <td className="py-4 px-6 text-white">
+    Multi-Modality Interaction
+  </td>
+  <td className="py-4 px-6 text-white">
+    Improves engagement through diverse communication methods
+  </td>
+  <td className="py-4 px-6 text-white">
+    Increases user satisfaction and accessibility
+  </td>
+</tr>
+<tr className="bg-[#CB7723] border-b border-gray-700">
+  <td className="py-4 px-6 text-white">
+    Automated Responses
+  </td>
+  <td className="py-4 px-6 text-white">
+    Reduces response time to student inquiries
+  </td>
+  <td className="py-4 px-6 text-white">
+    Enhances efficiency, allowing staff to focus on critical tasks
+  </td>
+</tr>
+<tr className="bg-[#CB7723] border-b border-gray-700">
+  <td className="py-4 px-6 text-white">
+    Data-driven Insights
+  </td>
+  <td className="py-4 px-6 text-white">
+    Provides analytics for informed decision-making
+  </td>
+  <td className="py-4 px-6 text-white">
+    Improves outcomes through targeted educational strategies
+  </td>
+</tr>
+<tr className="bg-[#CB7723] border-b border-gray-700">
+  <td className="py-4 px-6 text-white">
+    GDPR Compliance
+  </td>
+  <td className="py-4 px-6 text-white">
+    Ensures data privacy and security
+  </td>
+  <td className="py-4 px-6 text-white">
+    Builds trust and compliance with international standards
+  </td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
     </div>
   );
 }
