@@ -5,6 +5,7 @@ import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
 import Features from "../../../components/features";
+import Mapping from "../../../components/mapping";
 import { MenuIcon } from "@heroicons/react/solid";
 import React, { useState, useEffect } from "react";
 
@@ -46,30 +47,6 @@ export default function EnterpriseLandingPage() {
             <MenuIcon className="h-6 w-6 text-white" />
           </button>
         </div>
-        {/* Navigation links container */}
-        {/* <div className="hidden md:flex md:justify-center md:items-center md:w-full">
-          <div className="flex justify-around w-full max-w-2xl">
-            {" "}
-            {/* Adjust max-width as needed */}
-            {/*}
-            <a href="/about" className="text-white hover:underline">
-              About Us
-            </a>
-            <a href="/enterprises" className="text-white hover:underline">
-              Enterprises
-            </a>
-            <a href="/institutes" className="text-white hover:underline">
-              Institutes
-            </a>
-            <a href="/pricing" className="text-white hover:underline">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:underline">
-              Contact
-            </a>
-          </div>
-        </div> */}
-        {/* Mobile menu */}
         <div
           className={`fixed top-0 right-0 transform ${
             isMenuOpen ? "translate-x-0" : "translate-x-full "
@@ -104,23 +81,6 @@ export default function EnterpriseLandingPage() {
               layout="fixed"
             />
           </div>
-          {/* <div className="flex flex-col justify-start items-start px-4 space-y-4">
-            <a href="/about" className="text-white hover:underline">
-              About
-            </a>
-            <a href="/enterprises" className="text-white hover:underline">
-              Enterprises
-            </a>
-            <a href="/institutes" className="text-white hover:underline">
-              Institutes
-            </a>
-            <a href="/pricing" className="text-white hover:underline">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:underline">
-              Contact
-            </a>
-          </div> */}
         </div>
       </nav>
 
@@ -148,26 +108,29 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-  <h2 className="my-8 text-2xl font-bold text-gray-400 md:text-4xl">
+  <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
     Why Use A.I.?
   </h2>
-  <p className="text-gray-300 mt-2">
-    Embrace the future of technology with our comprehensive AIaaS solution. Here are some of the standout features that set us apart:
-  </p>
+    <p className="text-gray-300 mt-2">
+  Imagine a small bookstore where AI-driven recommendations help customers discover books that feel personally curated for their tastes, or a coffee shop where AI optimizes inventory based on predictive analytics of buying patterns. Picture a manufacturing plant where AI enhances efficiency, predicting maintenance issues before they occur, or a healthcare provider where AI algorithms predict patient health risks with astonishing accuracy.
+    </p>
   <br></br>
-  <ul className="list-none text-gray-200" >
-    <li>✅ <strong>Multi-Modality Interaction:</strong> Seamlessly integrates various forms text, voice, and visual data.</li>
-    <li>✅ <strong>Text-to-Voice & Voice-to-Text Capabilities:</strong> Spoken language into text and vice versa.</li>
-    <li>✅ <strong>Retrieval Augmented Generation:</strong> Leverage historical data to generate contextually relevant retrieval.</li>
-    <li>✅ <strong>Secure Login:</strong> Advanced security protocols to ensure user identity protection and data privacy.</li>
-    <li>✅ <strong>GDPR Compliance:</strong> Strictest data protection regulations, handling all data with utmost security.</li>
-  </ul>
+  <ul className="list-none text-gray-200">
+  <li>✅ <strong>Multi-Modality Interaction:</strong> Seamlessly integrates various forms text, voice, and visual data.</li>
+  <li>✅ <strong>Retrieval Augmented Generation:</strong> Leverages historical data to generate contextually relevant content.</li>
+  <li>✅ <strong>GDPR Compliance:</strong> Meets the strictest data protection regulations, handling all data with confidentiality.</li>
+  <li>✅ <strong>Real-Time Analytics:</strong> Provides immediate insights into user behavior and system performance.</li>
+  <li>✅ <strong>Automated Customer Support:</strong> Offers 24/7 customer service with instant, automated responses to inquiries.</li>
+  <li>✅ <strong>Integration Capabilities:</strong> Easily integrates with existing platforms and software, minimizing disruption.</li>
+  
+</ul>
+
   
 </div>
 
 <div className="mt-6">
   <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
-    Operational Efficiency with AI ?
+    Operational Efficiency with AI
   </h2>
   <p className="text-gray-300 mt-2">
     AI technology is revolutionizing how businesses operate, offering unprecedented improvements in efficiency and productivity. By integrating AI solutions, organizations can harness the full potential of digital transformation.
@@ -200,73 +163,7 @@ export default function EnterpriseLandingPage() {
 
       {/* Features Section */}
       <Features />
-      <div className="mt-6">
-  <h3 className="my-4 text-xl font-bold text-gray-100 md:text-3xl text-center">
-    AI Efficiency in Organizational Settings
-  </h3>
-  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-  <thead className="text-xs uppercase text-white bg-[#0A2342]">
-      <tr>
-        <th scope="col" className="py-3 px-6">
-          Feature
-        </th>
-        <th scope="col" className="py-3 px-6">
-          Benefit
-        </th>
-        <th scope="col" className="py-3 px-6">
-          Impact
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Multi-Modality Interaction
-  </td>
-  <td className="py-4 px-6 text-white">
-    Improves engagement through diverse communication methods
-  </td>
-  <td className="py-4 px-6 text-white">
-    Increases user satisfaction and accessibility
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Automated Responses
-  </td>
-  <td className="py-4 px-6 text-white">
-    Reduces response time to student inquiries
-  </td>
-  <td className="py-4 px-6 text-white">
-    Enhances efficiency, allowing staff to focus on critical tasks
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Data-driven Insights
-  </td>
-  <td className="py-4 px-6 text-white">
-    Provides analytics for informed decision-making
-  </td>
-  <td className="py-4 px-6 text-white">
-    Improves outcomes through targeted educational strategies
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    GDPR Compliance
-  </td>
-  <td className="py-4 px-6 text-white">
-    Ensures data privacy and security
-  </td>
-  <td className="py-4 px-6 text-white">
-    Builds trust and compliance with international standards
-  </td>
-</tr>
-
-    </tbody>
-  </table>
-</div>
+      <Mapping />
 
     </div>
   );

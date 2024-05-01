@@ -5,6 +5,7 @@ import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
 import Features from "../../../components/features";
+import Mapping from "../../../components/mapping";
 import { MenuIcon } from "@heroicons/react/solid";
 import React, { useState, useEffect } from "react";
 
@@ -46,32 +47,6 @@ export default function EnterpriseLandingPage() {
             <MenuIcon className="h-6 w-6 text-white" />
           </button>
         </div>
-        {/* Navigation links container */}
-        {/* <div className="hidden md:flex md:justify-center md:items-center md:w-full">
-          <div className="flex justify-around w-full max-w-2xl">
-            {" "}
-            {/* Adjust max-width as needed */}
-            {/*}
-            <a href="/about" className="text-white hover:underline">
-              About Us
-            </a>
-            <a href="/enterprises" className="text-white hover:underline">
-              Enterprises
-            </a>
-            <a href="/institutes" className="text-white hover:underline">
-              Institutes
-            </a>
-            <a href="/pricing" className="text-white hover:underline">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:underline">
-              Contact
-            </a>
-          </div>
-        </div>*/}
-
-
-        {/* Mobile menu */}
         <div
           className={`fixed top-0 right-0 transform ${
             isMenuOpen ? "translate-x-0" : "translate-x-full "
@@ -169,7 +144,7 @@ export default function EnterpriseLandingPage() {
 
 <div className="mt-6">
   <h2 className="my-8 text-2xl font-bold text-gray-300 md:text-4xl">
-    Operational Efficiency with AI ?
+    Operational Efficiency with AI
   </h2>
   <p className="text-gray-300 mt-2">
     AI technology is revolutionizing how businesses operate, offering unprecedented improvements in efficiency and productivity. By integrating AI solutions, organizations can harness the full potential of digital transformation.
@@ -202,73 +177,7 @@ export default function EnterpriseLandingPage() {
 
       {/* Features Section */}
       <Features />
-      <div className="mt-6">
-  <h3 className="my-4 text-xl font-bold text-gray-100 md:text-3xl text-center">
-    AI Efficiency in Organizational Settings
-  </h3>
-  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-  <thead className="text-xs uppercase text-white bg-[#0A2342]">
-      <tr>
-        <th scope="col" className="py-3 px-6">
-          Feature
-        </th>
-        <th scope="col" className="py-3 px-6">
-          Benefit
-        </th>
-        <th scope="col" className="py-3 px-6">
-          Impact
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Multi-Modality Interaction
-  </td>
-  <td className="py-4 px-6 text-white">
-    Improves engagement through diverse communication methods
-  </td>
-  <td className="py-4 px-6 text-white">
-    Increases user satisfaction and accessibility
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Automated Responses
-  </td>
-  <td className="py-4 px-6 text-white">
-    Reduces response time to student inquiries
-  </td>
-  <td className="py-4 px-6 text-white">
-    Enhances efficiency, allowing staff to focus on critical tasks
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    Data-driven Insights
-  </td>
-  <td className="py-4 px-6 text-white">
-    Provides analytics for informed decision-making
-  </td>
-  <td className="py-4 px-6 text-white">
-    Improves outcomes through targeted educational strategies
-  </td>
-</tr>
-<tr className="bg-[#CB7723] border-b border-gray-700">
-  <td className="py-4 px-6 text-white">
-    GDPR Compliance
-  </td>
-  <td className="py-4 px-6 text-white">
-    Ensures data privacy and security
-  </td>
-  <td className="py-4 px-6 text-white">
-    Builds trust and compliance with international standards
-  </td>
-</tr>
-
-    </tbody>
-  </table>
-</div>
+      <Mapping />
 
     </div>
   );
