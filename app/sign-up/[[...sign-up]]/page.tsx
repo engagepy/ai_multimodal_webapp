@@ -1,6 +1,6 @@
 "use client";
 
-import { SignIn, SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -36,10 +36,18 @@ export default function EnterpriseLandingPage() {
         <div className="flex justify-start">
           <a href="https://astratechz.com"><Image
             alt="ATZ Logo"
-            height={150}
-            width={150}
-            src="/green_logo.png"
+            height={55}
+            width={55}
+            src="/atz_logo.png"
           /></a>
+        </div>
+        <div className="flex justify-start">
+          <a href="https://github.com/engagepy/ai_multimodal_webapp"><Image
+                alt="Github Logo"
+                height={50}
+                width={50}
+                src="/github-mark-white.png"
+              /></a>
         </div>
         {/* Mobile menu button */}
         {/* <div className="md:hidden">
@@ -108,7 +116,16 @@ export default function EnterpriseLandingPage() {
               clipRule="evenodd"
             />
           </svg>
-          <div className="mt-6">
+          <div className="flex w-full justify-center">
+          <div className="w-full max-w-xs mx-auto">
+            <h2 className="text-xl font-bold text-[#efb849] mb-4">
+              Explore Our Healthcare AI Demo
+            </h2>
+            <SignUp />
+            
+          </div>
+        </div>
+          <div className="mt-6 ">
   <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
     Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI ?</span>
   </h2>
@@ -151,15 +168,7 @@ export default function EnterpriseLandingPage() {
         </div>
 
         {/* Adjusted SignIn box */}
-        <div className="flex w-full lg:w-1/3 justify-center p-4">
-          <div className="w-full max-w-xs mx-auto">
-            <h2 className="text-xl font-bold text-[#efb849] mb-4">
-              Explore Our Healthcare AI Demo
-            </h2>
-            <SignUp />
-            
-          </div>
-        </div>
+        
       </div>
 
       {/* Features Section */}
