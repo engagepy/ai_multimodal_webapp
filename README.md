@@ -40,7 +40,6 @@ It's designed to be easy to deploy and use, with a focus on performance and usab
 ### Prerequisites
 
 - A Clerk Free Account. You can [create one here](https://clerk.com).
-  - An Astra Vector Database
 - An OpenAI account. You can [create one here](https://platform.openai.com/).
 
 ### Setup
