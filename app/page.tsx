@@ -170,20 +170,13 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/green_logo.png"
+                  src="/atz_logo.png"
                   className="w-18 h-8 md:w-25 md:h-10"
                   width="50"
                   height="100"
                   alt="Logo"
                 />
-                <Link href="https://github.com/engagepy/ai_multimodal_webapp">
-                  <Image
-                alt="Github Logo"
-                height={100}
-                width={100}
-                src="/github-mark-white.png"
-              />
-              </Link>
+                
 
                 {/* <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'></h1> */}
               </div>

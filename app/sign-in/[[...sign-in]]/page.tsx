@@ -36,9 +36,9 @@ export default function EnterpriseLandingPage() {
         <div className="flex justify-start">
           <a href="https://astratechz.com"><Image
             alt="ATZ Logo"
-            height={150}
-            width={150}
-            src="/green_logo.png"
+            height={55}
+            width={55}
+            src="/atz_logo.png"
           /></a>
         </div>
         <div className="flex justify-start">
