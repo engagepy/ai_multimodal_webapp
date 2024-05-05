@@ -33,7 +33,7 @@ It's designed to be easy to deploy and use, with a focus on performance and usab
 ## Features
 
 - **OpenAI Integration Chat/Assistant API**: Leverage the power of OpenAI to generate intelligent responses.
-- **Clerk Integration User Management**: Leverage the power of OpenAI to generate intelligent responses.
+- **Clerk Integration User Management**: Providing secure wholistic user management.
 - **Easy Deployment**: Deploy your chatbot to Vercel with just a few clicks.
 - **Customizable**: Modify and extend the chatbot to suit your needs.
 
