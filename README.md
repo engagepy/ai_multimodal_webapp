@@ -1,4 +1,4 @@
-# Production Ready AI Assistant Starter
+# Production Ready AI Web App Template
 
 Link to open source: https://github.com/engagepy/assistant_ai_chat_rag 
 
