@@ -1,16 +1,18 @@
-# Production Ready AI Web App Template
+# AI Web App with Next.js, OpenAI, and Clerk
+
+## Serve your AI solutions to the world in minutes, with a production-ready Next.js template. 
+
+### Secure user management and AI models served via OpenAI APIs and Clerk integration.
 
 Link to open source: https://github.com/engagepy/assistant_ai_chat_rag 
 
-Link to Live Project: https://ai.astratechz.com 
-
-Production ready Nexjs template for deploying your AI solutions to the world.  
+Link to Live Project: https://ai.astratechz.com  
 
 Each deployment can be backed by native data using `client.beta.vector_stores.create` API by OpenAI. 
 
-This project aims to serve as a template for you to work on building a model, fine-tuning or enabling RAG by simply uploading files in assistant playground and serving your AI solution to the world in minutes. 
+This project aims to serve as a template for you to work on building/connecting a model, fine-tuning or enabling RAG by simply uploading files in OpenAI assistant playground and serving your AI solution to the world in minutes. 
 
-Following the steps in `ReadMe` you should have the project live responding to your use case in less than 15 minutes. Yes familiarity quotient with nextjs, vercel, clerk and openai can make it relatively faster or slower to deploy. But the process overall aims to remain a breeze. Write in if you're stuck somewhere.  
+Follow the instructions and you should have the project live responding to your use case in no time. Yes familiarity quotient with nextjs, vercel, clerk and openai can make it relatively faster or slower to deploy. But the process overall aims to remain a breeze. Write in if you're stuck somewhere. Website link is at the end.  
 
 Feature Highlights:
 
