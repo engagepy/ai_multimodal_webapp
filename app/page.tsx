@@ -10,6 +10,7 @@ import ThemeButton from "../components/ThemeButton";
 import useConfiguration from "./hooks/useConfiguration";
 import { UserButton } from "@clerk/nextjs";
 import { Mic, SendHorizontal } from "lucide-react";
+import Link from "next/link";
 import { start } from "repl";
 import { on } from "events";
 
@@ -175,6 +176,15 @@ export default function Home() {
                   height="100"
                   alt="Logo"
                 />
+                <Link href="https://github.com/engagepy/ai_multimodal_webapp">
+                  <Image
+                alt="Github Logo"
+                height={100}
+                width={100}
+                src="/github-mark-white.png"
+              />
+              </Link>
+
                 {/* <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'></h1> */}
               </div>
               <div className="flex gap-1">

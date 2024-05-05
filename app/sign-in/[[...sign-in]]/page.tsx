@@ -41,6 +41,14 @@ export default function EnterpriseLandingPage() {
             src="/green_logo.png"
           /></a>
         </div>
+        <div className="flex justify-start">
+          <a href="https://github.com/engagepy/ai_multimodal_webapp"><Image
+                alt="Github Logo"
+                height={50}
+                width={50}
+                src="/github-mark-white.png"
+              /></a>
+        </div>
         {/* Mobile menu button */}
         {/* <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>

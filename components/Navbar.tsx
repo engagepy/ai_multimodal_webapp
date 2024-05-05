@@ -9,16 +9,26 @@ const Navbar = () => {
   return (
     <>
       <Head>
-        <title>Kavach A.I. - Empowering Mental Wellness</title>
+        <title>ATZ AI DEMO</title>
       </Head>
       <nav className="flex justify-between items-center p-4 w-full bg-gray-800 p-4 z-10">
         <div className="flex justify-start">
           <Link href="/">
             <Image
-              alt="Kavach Logo"
+              alt="ATZ Logo"
               height={100}
               width={100}
               src="/green_logo.png"
+            />
+          </Link>
+        </div>
+        <div className="flex justify-start">
+          <Link href="https://github.com/engagepy/ai_multimodal_webapp">
+            <Image
+              alt="Github Logo"
+              height={100}
+              width={100}
+              src="/github-mark-white.png"
             />
           </Link>
         </div>
