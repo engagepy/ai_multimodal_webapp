@@ -1,6 +1,18 @@
 # Production Ready AI Assistant Starter
 
-This project is a starter for creating a multimodal chatbot enabled with OpenAI and Clerk. It includes the following features:
+Link to open source: https://github.com/engagepy/assistant_ai_chat_rag 
+
+Link to Live Project: https://ai.astratechz.com 
+
+Production ready Nexjs template for deploying your AI solutions to the world.  
+
+Each deployment can be backed by native data using `client.beta.vector_stores.create` API by OpenAI. 
+
+This project aims to serve as a template for you to work on building a model, fine-tuning or enabling RAG by simply uploading files in assistant playground and serving your AI solution to the world in minutes. 
+
+Following the steps in `ReadMe` you should have the project live responding to your use case in less than 15 minutes. Yes familiarity quotient with nextjs, vercel, clerk and openai can make it relatively faster or slower to deploy. But the process overall aims to remain a breeze. Write in if you're stuck somewhere.  
+
+Feature Highlights:
 
 multilingual ✅
 voice-to-text ✅
@@ -8,7 +20,13 @@ text-to-voice ✅
 secure-login ✅
 anonymous ✅
 
- It's designed to be easy to deploy and use, with a focus on performance and usability.
+Models Used:
+
+𝌭 tts - text to speech
+𝌭 whisper - speech to text
+𝌭 gpt-4-turbo - chat completions
+
+It's designed to be easy to deploy and use, with a focus on performance and usability.
 
 ## Features
 
