@@ -46,7 +46,7 @@ It's designed to be easy to deploy and use, with a focus on performance and usab
 
 1. Clone this repository to your local machine.
 2. Install the dependencies by running `npm install` in your terminal.
-3. Set up the following four environment variables in your IDE or `.env` file:
+3. Replace these four environment variables in your IDE or `.env` file. Keep the rest as defined in `.env.example`:
 
    - OPENAI_API_KEY=REPLACE_ME
    - OPENAI_ASSISTANT_ID=REPLACE_ME if using OpenAI Assistant API 
