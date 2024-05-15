@@ -161,7 +161,7 @@ export default function EnterpriseLandingPage() {
         {/* Adjusted SignIn box */}
         <div className="flex w-full lg:w-1/3 justify-center p-4">
           <div className="w-full max-w-xs mx-auto">
-            <h2 className="text-xl font-bold text-[#efb849] mb-4">
+            <h2 className="text-xl font-bold text-white mb-4">
               Explore Our Healthcare AI Demo
             </h2>
             <SignUp />
