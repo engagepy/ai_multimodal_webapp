@@ -5,17 +5,17 @@
 :root {
   --text-primary: #ffffff;
   --text-primary-inverse: #090909;
-  --text-primary-main: #2a8d5c; /* Updated to use the gradient start color for primary text in light mode */
-  --text-secondary: #de4ff3; /* Updated to use the gradient middle color for secondary text */
+  --text-primary-main: #2a8d5c;
+  --text-secondary: #de4ff3;
   --text-secondary-inverse: #494a4d;
   --background-bubble-primary: #611c9b;
   --background-bubble-secondary: #f7f7f7;
   --border-primary: #ced0d2;
   --background-soft: #f3e5f5;
-  --background-start-rgb: 163, 238, 152; /* Updated to login page gradient start */
-  --background-end-rgb: 233, 252, 136; /* Updated to login page gradient end */
-  --background-start-rgb: 229, 231, 235; /* Updated to gray 200 for login page gradient start */
-  --background-end-rgb: 229, 231, 235; /* Updated to gray 200 for login page gradient end */
+  --background-start-rgb: 163, 238, 152;
+  --background-end-rgb: 233, 252, 136;
+  --background-start-rgb: 229, 231, 235;
+  --background-end-rgb: 229, 231, 235;
   --text-tertiary: #6b6f73;
   --shadow-primary: 0px 6px 16px 0px rgba(10, 10, 10, 0.12),
     0px 4px 14px 0px rgba(10, 10, 10, 0.08),
@@ -26,15 +26,23 @@
 .dark {
   --text-primary: #090909;
   --text-primary-inverse: #ffffff;
-  --text-primary-main: #9946b9; /* Preserved for dark mode primary text */
+  --text-primary-main: #9946b9;
   --text-secondary: #494a4d;
   --text-secondary-inverse: #a6aaae;
-  --background-bubble-primary: #1c1c1c;  /* Preserved for dark mode bubbles */
+  --background-bubble-primary: #ba68c8;
   --background-bubble-secondary: #232324;
   --background-soft: #200033;
   --border-primary: #262626;
-  --background-start-rgb: 23, 23, 23; /* Preserved for dark mode gradient start */
-  --background-end-rgb: 28, 28, 28; /* Preserved for dark mode gradient end */
+  --background-start-rgb: 23, 23, 23;
+  --background-end-rgb: 28, 28, 28;
+}
+
+.configure-modal-bg-light {
+  background-color: var(--background-bubble-secondary);
+}
+
+.configure-modal-bg-dark {
+  background-color: #1c1c1c;
 }
 
 body {
