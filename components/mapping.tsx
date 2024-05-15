@@ -4,7 +4,7 @@ export const Mapping = () => {
   return (
     <>
     <div className="mt-6">
-  <h3 className="my-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br text-[#efb849] md:text-3xl text-center">
+  <h3 className="my-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br text-white md:text-3xl text-center">
     AI <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency Mapping</span>
   </h3>
   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -22,7 +22,7 @@ export const Mapping = () => {
       </tr>
     </thead>
     <tbody>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Multi-Modality Interaction
       </td>
@@ -33,7 +33,7 @@ export const Mapping = () => {
         Increases user satisfaction by 40% and accessibility by 25%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Automated Responses
       </td>
@@ -44,7 +44,7 @@ export const Mapping = () => {
         Enhances efficiency by 70%, allowing staff to focus on critical tasks
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Data-driven Insights
       </td>
@@ -55,7 +55,7 @@ export const Mapping = () => {
         Improves outcomes through targeted strategies, increasing performance by 50%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         GDPR Compliance
       </td>
@@ -66,7 +66,7 @@ export const Mapping = () => {
         Builds trust and compliance with international standards, reducing legal risks by 90%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Scalable Learning Models
       </td>
@@ -77,7 +77,7 @@ export const Mapping = () => {
         Maintains high performance with 99.9% uptime even under heavy load
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Real-time Feedback
       </td>
@@ -88,7 +88,7 @@ export const Mapping = () => {
         Increases learning curve by 35%, enhancing user experience significantly
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Customizable Interfaces
       </td>
@@ -99,7 +99,7 @@ export const Mapping = () => {
         Improves user interface satisfaction by 30%, fostering better engagement
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Cloud-Based Infrastructure
       </td>
@@ -110,7 +110,7 @@ export const Mapping = () => {
         Cuts down on infrastructure costs by 50% while boosting data recovery capabilities
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Machine Learning Optimization
       </td>
@@ -121,7 +121,7 @@ export const Mapping = () => {
         Reduces manual data processing by 80%, increasing overall efficiency
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Predictive Modelling
       </td>
@@ -132,7 +132,7 @@ export const Mapping = () => {
         Enhances strategic planning accuracy by 60%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         User Experience Analytics
       </td>
@@ -143,7 +143,7 @@ export const Mapping = () => {
         Boosts usability and satisfaction metrics by 45%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         API Integrations
       </td>
@@ -154,7 +154,7 @@ export const Mapping = () => {
         Reduces integration time by 75%, simplifying technology management
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Comprehensive Reporting Tools
       </td>
@@ -165,7 +165,7 @@ export const Mapping = () => {
         Improves decision-making efficiency by 50%, enabling faster adjustments
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Multi-Language Support
       </td>
@@ -176,7 +176,7 @@ export const Mapping = () => {
         Expands market reach by 30%, increasing user base and inclusivity
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         24/7 Customer Support
       </td>
@@ -187,7 +187,7 @@ export const Mapping = () => {
         Enhances customer satisfaction and retention by 25%
       </td>
     </tr>
-    <tr className="bg-[#CB7723] border-b border-gray-700">
+    <tr className="bg-[#22222] border-b border-gray-700">
       <td className="py-4 px-6 text-white">
         Security Enhancements
       </td>

@@ -197,9 +197,9 @@ export default function Home() {
               </div>
             </div>
             <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">
-              With{" "}
-              <span className="text-[var(--text-primary-main)]">
-                ATZ A.I. mental health
+              To{" "}
+              <span className=" text-green">
+                make mental health
               </span>{" "}
               is a breeze! State your questions or dilemmas. Chat is{" "}
               <span className="text-[var(--text-primary-main)]">

@@ -27,7 +27,7 @@ export default function EnterpriseLandingPage() {
   }, [fullText, typingDelay]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A2342] via-[#CB7723] to-[#FFD23F]">
+    <div className="min-h-screen bg-gradient-to-b from-[#111111] via-[#222222] to-[#333333]">
 
       <Head>
         <title>AI Empowering Next</title>

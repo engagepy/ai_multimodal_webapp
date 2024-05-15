@@ -14,6 +14,8 @@
   --background-soft: #f3e5f5;
   --background-start-rgb: 163, 238, 152; /* Updated to login page gradient start */
   --background-end-rgb: 233, 252, 136; /* Updated to login page gradient end */
+  --background-start-rgb: 229, 231, 235; /* Updated to gray 200 for login page gradient start */
+  --background-end-rgb: 229, 231, 235; /* Updated to gray 200 for login page gradient end */
   --text-tertiary: #6b6f73;
   --shadow-primary: 0px 6px 16px 0px rgba(10, 10, 10, 0.12),
     0px 4px 14px 0px rgba(10, 10, 10, 0.08),
