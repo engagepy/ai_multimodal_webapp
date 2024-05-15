@@ -1,6 +1,6 @@
 "use client";
 
-import { SignIn, SignUp } from "@clerk/nextjs";
+import { SignIn } from "@clerk/nextjs";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -48,8 +48,8 @@ export default function EnterpriseLandingPage() {
           <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
-      
-      <div className="flex flex-wrap items-start justify-center lg:items-center lg:justify-between p-4 max-w-full">
+
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-between p-4 max-w-full">
         <div className="w-full lg:w-2/3 flex flex-col justify-between p-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
             <path
@@ -78,7 +78,7 @@ export default function EnterpriseLandingPage() {
 
           <div className="mt-6">
             <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
-              Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency with AI</span>
+              Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">AI Efficiency </span>
             </h2>
             <p className="text-gray-300 mt-2">
               AI technology is revolutionizing how businesses operate, offering unprecedented improvements in efficiency and productivity. By integrating AI solutions, organizations can harness the full potential of digital transformation.
@@ -96,12 +96,14 @@ export default function EnterpriseLandingPage() {
           </div>
         </div>
 
-        <div className="flex w-full lg:w-1/3 justify-center p-4">
-          <div className="w-full max-w-xs mx-auto">
-            <h2 className="text-xl font-bold text-white mb-4">
+        <div className="flex justify-center items-center w-full lg:w-1/3 p-4 lg:pt-24 order-first lg:order-last">
+          <div className="w-full max-w-xs">
+            <h2 className="text-xl font-bold text-white mb-4 text-center">
               Explore Our Healthcare AI Demo
             </h2>
-            <SignIn />
+            <div className="flex justify-center">
+              <SignIn />
+            </div>
           </div>
         </div>
       </div>
