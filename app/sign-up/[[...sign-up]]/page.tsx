@@ -59,7 +59,7 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
               Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI ?</span>
             </h2>
             <p className="text-gray-300 mt-2">
@@ -77,7 +77,7 @@ export default function EnterpriseLandingPage() {
           </div>
 
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
               Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency with AI</span>
             </h2>
             <p className="text-gray-300 mt-2">

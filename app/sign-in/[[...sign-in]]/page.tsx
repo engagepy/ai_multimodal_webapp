@@ -1,6 +1,6 @@
 "use client";
 
-import { SignIn } from "@clerk/nextjs";
+import { SignIn, SignUp } from "@clerk/nextjs";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -48,7 +48,7 @@ export default function EnterpriseLandingPage() {
           <span className="animate-blink text-[#c1fe6c]">_</span>
         </h1>
       </div>
-
+      
       <div className="flex flex-wrap items-start justify-center lg:items-center lg:justify-between p-4 max-w-full">
         <div className="w-full lg:w-2/3 flex flex-col justify-between p-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
@@ -59,7 +59,7 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
               Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI ?</span>
             </h2>
             <p className="text-gray-300 mt-2">
@@ -77,7 +77,7 @@ export default function EnterpriseLandingPage() {
           </div>
 
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#efb849] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
               Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Efficiency with AI</span>
             </h2>
             <p className="text-gray-300 mt-2">
