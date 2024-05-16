@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        typewriter: 'typewriter 4s steps(44) 1s 1 normal both',
+        typewriter: 'typewriter 4s steps(44) 3.5s 1 normal both',
       },
     },
   },

@@ -11,8 +11,6 @@ import useConfiguration from "./hooks/useConfiguration";
 import { UserButton } from "@clerk/nextjs";
 import { Mic, SendHorizontal } from "lucide-react";
 import Link from "next/link";
-import { start } from "repl";
-import { on } from "events";
 
 let recorder = null;
 
@@ -25,12 +23,13 @@ export default function Home() {
   const { append, messages, input, handleInputChange, handleSubmit } = useChat({
     onFinish,
   });
-  const { useRag, llm, similarityMetric, setConfiguration } =
-    useConfiguration();
+  const { useRag, llm, similarityMetric, setConfiguration } = useConfiguration();
 
   const messagesEndRef = useRef(null);
   const [configureOpen, setConfigureOpen] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+  const [timeoutt, setTimeoutt] = useState(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -53,9 +52,6 @@ export default function Home() {
     };
     append(msg, { options: { body: { useRag, llm, similarityMetric } } });
   };
-
-  const [showNotification, setShowNotification] = useState(false);
-  const [timeoutt, setTimeoutt] = useState(null);
 
   const startRecording = () => {
     let constraints = {
@@ -134,6 +130,8 @@ export default function Home() {
     sendAudio(data);
   };
 
+  const [showMicHover, setShowMicHover] = useState(true);
+
   const handleMicrophoneClick = () => {
     console.log("Microphone clicked", isRecording);
     if (isRecording) {
@@ -150,10 +148,12 @@ export default function Home() {
         setTimeout(() => {
           setShowNotification(false);
           stopRecording();
-        }, 15000)
+        }, 30000)
       );
     }
+    setShowMicHover(false);
   };
+
   return (
     <>
       {/* Notification */}
@@ -176,9 +176,6 @@ export default function Home() {
                   height="100"
                   alt="Logo"
                 />
-                
-
-                {/* <h1 className=' text-xl md:text-2xl font-medium text-yellow-500'></h1> */}
               </div>
               <div className="flex gap-1">
                 <ThemeButton />
@@ -198,24 +195,15 @@ export default function Home() {
             </div>
             <p className="chatbot-text-secondary-inverse text-center text-sm md:text-base mt-2 md:mt-4">
               Make{" "}
-              <span className="text-[var(--text-primary-main)]">
-                mental health
-              </span>{" "}
+              <span className="text-[var(--text-primary-main)]">mental health</span>{" "}
               a breeze at your organisation or institute. Chat is{" "}
-              <span className="text-[var(--text-primary-main)]">
-                100% anonymous.
-              </span>
+              <span className="text-[var(--text-primary-main)]">100% anonymous.</span>
             </p>
-            <hr className="my-4" />
             <p className="chatbot-text-secondary-inverse text-center text-sm md:text-base mt-2 md:mt-4">
               <span className="text-[var(--text-primary-main)] inline-block overflow-hidden whitespace-nowrap animate-typewriter">
                 Simply state your questions or dilemmas.
               </span>
             </p>
-
-
-
-             
           </div>
           <div className="flex-1 relative overflow-y-auto my-4 md:my-6">
             <div className="absolute w-full overflow-x-hidden">
@@ -256,33 +244,31 @@ export default function Home() {
                   d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
                 />
               </svg>
-
-              {/* <SendHorizontal className="chatbot-text-secondary-inverse" /> */}
             </button>
 
             {/* Record Button */}
-            <button
-              onClick={handleMicrophoneClick}
-              className="chatbot-record-button flex rounded-md items-center justify-center px-2.5"
-            >
-              {isRecording ? (
-                // <SendHorizontal className="chatbot-text-secondary-inverse bg-white" />
-                // <svg width="20" height="20" viewBox="0 0 20 20">
-                //   <path
-                //     fill="yellow"
-                //     stroke="black"
-                //     strokeWidth="0.5"
-                //     d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z"
-                //   />
-                // </svg>
-                <Mic
-                  color="green"
-                  className="chatbot-text-secondary-inverse text-green"
-                />
-              ) : (
-                <Mic className="chatbot-text-secondary-inverse" />
+            <div className="relative">
+              <button
+                type="button"
+                onClick={handleMicrophoneClick}
+                className="chatbot-record-button flex rounded-md items-center justify-center px-2.5"
+              >
+                {isRecording ? (
+                  <Mic
+                    color="green"
+                    className="chatbot-text-secondary-inverse text-green"
+                  />
+                ) : (
+                  <Mic className="chatbot-text-secondary-inverse" />
+                )}
+              </button>
+              {showMicHover && (
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-1 text-xs text-center text-white bg-gray-800 rounded-md shadow-lg w-24 sm:w-20 md:w-24 lg:w-28 xl:w-32">
+
+                  Click to speak, click again to send. Max 30 seconds.
+                </div>
               )}
-            </button>
+            </div>
           </form>
 
           <Footer />
