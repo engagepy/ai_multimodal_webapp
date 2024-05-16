@@ -168,15 +168,21 @@ export default function Home() {
         <section className="chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full rounded-md p-2 md:p-6">
           <div className="chatbot-header pb-6">
             <div className="flex justify-between">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/atz_logo.png"
-                  className="w-18 h-8 md:w-25 md:h-10"
-                  width="50"
-                  height="100"
-                  alt="Logo"
-                />
-              </div>
+            
+            <div className="flex items-center gap-2">
+              <Link href="https://astratechz.com" target="_blank" rel="noopener noreferrer" passHref>
+  
+                  <Image
+                    src="/atz_logo.png"
+                    className="w-10 h-4 sm:w-15 sm:h-5 md:w-25 md:h-7"
+                    width="40"
+                    height="40"
+                    alt="Logo"
+                  />
+                
+              </Link>
+            </div>
+
               <div className="flex gap-1">
                 <ThemeButton />
                 <button onClick={() => setConfigureOpen(true)}>
