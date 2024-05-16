@@ -15,6 +15,15 @@ module.exports = {
       screens: {
         origin: "800px",
       },
+      keyframes: {
+        typewriter: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        typewriter: 'typewriter 4s steps(44) 1s 1 normal both',
+      },
     },
   },
   plugins: [],

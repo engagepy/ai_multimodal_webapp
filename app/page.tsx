@@ -196,16 +196,26 @@ export default function Home() {
                 <UserButton />
               </div>
             </div>
-            <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">
-              Making{" "}
+            <p className="chatbot-text-secondary-inverse text-center text-sm md:text-base mt-2 md:mt-4">
+              Make{" "}
               <span className="text-[var(--text-primary-main)]">
-                Mental health
+                mental health
               </span>{" "}
-              a breeze! State your questions or dilemmas. Chat is{" "}
+              a breeze at your organisation or institute. Chat is{" "}
               <span className="text-[var(--text-primary-main)]">
                 100% anonymous.
               </span>
             </p>
+            <hr className="my-4" />
+            <p className="chatbot-text-secondary-inverse text-center text-sm md:text-base mt-2 md:mt-4">
+              <span className="text-[var(--text-primary-main)] inline-block overflow-hidden whitespace-nowrap animate-typewriter">
+                Simply state your questions or dilemmas.
+              </span>
+            </p>
+
+
+
+             
           </div>
           <div className="flex-1 relative overflow-y-auto my-4 md:my-6">
             <div className="absolute w-full overflow-x-hidden">
