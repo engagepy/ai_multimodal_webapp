@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
     appearance={{
-      baseTheme: neobrutalism,
+      baseTheme: dark,
       signIn: { baseTheme: dark },
       signUp: { baseTheme: dark },
     }}
