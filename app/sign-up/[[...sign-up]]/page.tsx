@@ -1,6 +1,6 @@
 "use client";
 
-import { SignIn, SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
@@ -43,9 +43,9 @@ export default function EnterpriseLandingPage() {
       </nav>
 
       <div className="text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#ff5a10] to-[#efb849]">
+      <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#a7c7e7] via-[#5271c4] to-[#103fef]">
           AI Empowering The Next
-          <span className="animate-blink text-[#c1fe6c]">_</span>
+          <span className="animate-blink text-[#103fef]">_</span>
         </h1>
       </div>
 
@@ -59,7 +59,7 @@ export default function EnterpriseLandingPage() {
             />
           </svg>
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#5271c4] md:text-4xl">
               Why <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">Use AI ?</span>
             </h2>
             <p className="text-gray-300 mt-2">
@@ -77,7 +77,7 @@ export default function EnterpriseLandingPage() {
           </div>
 
           <div className="mt-6">
-            <h2 className="my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
+            <h2 className="my-8 text-2xl font-bold text-[#5271c4] md:text-4xl">
               Operational <span className="text-transparent bg-clip-text bg-gradient-to-br text-white">AI Efficiency </span>
             </h2>
             <p className="text-gray-300 mt-2">

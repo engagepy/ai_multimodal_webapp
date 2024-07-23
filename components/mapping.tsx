@@ -4,12 +4,12 @@ export const Mapping = () => {
   return (
     <>
       <div className="mt-6">
-        <h2 className="text-center my-8 text-2xl font-bold text-[#ff5a10] md:text-4xl">
+        <h2 className="text-center my-8 text-2xl font-bold text-[#5271c4] md:text-4xl">
           AI <span className="gradient text-white">Efficiency Mapping</span>
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs uppercase text-white bg-[#ff5a10]">
+            <thead className="text-xs uppercase text-white bg-[#103fef]">
               <tr>
                 <th scope="col" className="py-3 px-6">
                   Feature
