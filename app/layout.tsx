@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
     appearance={{
-      baseTheme: dark,
-      signIn: { baseTheme: dark },
-      signUp: { baseTheme: dark },
+      baseTheme: shadesOfPurple,
+      signIn: { baseTheme: shadesOfPurple },
+      signUp: { baseTheme: shadesOfPurple },
     }}
     >
     <html lang="en" className={GeistSans.variable}>
